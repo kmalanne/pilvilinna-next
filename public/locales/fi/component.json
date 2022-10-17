@@ -1,0 +1,14 @@
+{
+  "carousel": "Asiakaspalautekaruselli",
+  "carousel_item": "Asiakaspalaute",
+
+  "image_gallery": "Kuvagalleria",
+  "image": "Tuotekuva",
+
+  "previous_button": "Edellinen painike",
+  "next_button": "Seuraava painike",
+
+  "close_modal_button": "Sulje dialogi",
+
+  "language_switch": "Kielenvalintapainike"
+}

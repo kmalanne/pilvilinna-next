@@ -1,0 +1,85 @@
+{
+  "title": "Valikoima ja hinnasto",
+  
+  "banner": "Valikoima ja hinnasto",
+
+  "heading": "VALIKOIMA JA HINNASTO, kaikki hinnat sisältävät alv 14%",
+
+  "unique_cake_title": "Uniikit täytekakut",
+  "unique_cake_description_1": "Täytekakut valmistetaan käsityönä asiakkaan toiveiden mukaan. Kakuissa on täytteenä rahka- tai tuorejuustopohjaiset liivatteella hyydytetyt mousset. 10-12 hengen kakussa 1 mousse ja isommissa kakuissa 2 moussea. Kuorrutteena on maustettu marenkivoikreemi ellei muuta toivota. Pohjaksi voit valita vaalean- tai kaakaopohjan. Lopullinen hinta määräytyy kakun koristelun perusteella.",
+  "unique_cake_description_2": "Kakkumenu 18-20 hengen ja noin 25-30 hengen kakkuihin (soveltaen 10-12 hengen kakkuihin)",
+  "unique_cake_choice_1": "Vadelman viettelys (vaalea pohja, vadelmamousse ja valkosuklaamousse valkosuklaarouheella)",
+  "unique_cake_choice_2": "Kinuskin kuiskaus (vaalea pohja, kinuskimousse vadelmilla ja vadelmamousse)",
+  "unique_cake_choice_3": "Metsäretkellä (vaalea pohja, vaniljamousse puolukoilla ja kinuskimousse)",
+  "unique_cake_choice_4": "Sweet and sour (vaalea pohja, sitruunamousse ja kinuskimousse suolaisella maitosuklaarouheella)",
+  "unique_cake_choice_5": "Isoäidin mustikkapiirakka (vaalea pohja, mustikka-kardemummamousse ja vaniljamousse mustikoilla)",
+  "unique_cake_choice_6": "Tropiikin kutsu (vaalea pohja, mansikka-limemousse ja mango-ananasmousse (kesäisin mangomousse mansikoilla))",
+  "unique_cake_choice_7": "Lakritsin lumo (vaalea pohja, lakritsimousse vadelmilla ja vadelmamousse)",
+  "unique_cake_choice_8": "Mansikkakesä (vaalea pohja, mansikkamousse, sitruunamousse mansikoilla) saatavilla kesän mansikka-aikaan",
+  "unique_cake_choice_9": "Haaveista totta (oma valintainen pohja ja 1-2 täytettä toiveidesi mukaan)",
+
+  "mousse_cake_title": "Keksipohjaiset moussekakut",
+  "mousse_cake_description": "Moussekakuissa on rahka- tai tuorejuustopohjaiset liivatteella hyydytetyt mousset ja keksipohja. Maut vastaavia kuin täytekakuissa.",
+
+  "chocolate_cake_title": "Pilvilinnan suklaakakku",
+  "chocolate_cake_description_1": "Maailman paras suklaakakku, jossa mehevän suklaisen pohjan välissä kirsikkahilloa ja mascarpone-suklaamoussea sekä päällä täydellinen suklaakuorrute.",
+  "chocolate_cake_description_2": "Voit myös ostaa Pilvilinnan suklaakakun reseptin (toimitetaan sähköpostiin) hintaan",
+
+  "cupcake_title": "Kuppikakut / minikuppikakut",
+  "cupcake_description_1": "Tilauserä (myös minimi) 12 kpl normaali / 24 kpl mini, teeman mukainen koristelu",
+  "cupcake_description_2": "Makuina muun muassa:",
+  "cupcake_choice_1": "vadelma-valkosuklaa",
+  "cupcake_choice_2": "suklaa",
+  "cupcake_choice_3": "suklaa-valkosuklaa",
+  "cupcake_choice_4": "minttusuklaa",
+  "cupcake_choice_5": "maapähkinä-suklaa",
+  "cupcake_choice_6": "suklaa-Nutella",
+  "cupcake_choice_7": "mustikka-sitruuna",
+  "cupcake_choice_8": "banaani-kinuski",
+  "cupcake_choice_9": "Biscoff",
+
+  "meringue_title": "Pilvet (maustetut isot marengit)",
+  "meringue_choice_1": "tumma suklaa",
+  "meringue_choice_2": "mokka-suklaa",
+  "meringue_choice_3": "piparminttu-suklaa",
+  "meringue_choice_4": "turkinpippuri",
+  "meringue_choice_5": "vadelma",
+
+  "cookie_title": "Cookiet",
+  "cookie_choice_1": "suklaahippu",
+  "cookie_choice_2": "suklaa",
+
+  "macaron_title": "Macarons",
+  "macaron_description": "Tilauserä (myös minimi) 24kpl/maku, (väri valittavissa toiveiden mukaan)",
+  "macaron_choice_1": "sitruuna",
+  "macaron_choice_2": "lime",
+  "macaron_choice_3": "mustaherukka",
+  "macaron_choice_4": "suolakinuski",
+  "macaron_choice_5": "suklaa",
+  "macaron_choice_6": "minttusuklaa",
+  "macaron_choice_7": "Nutella",
+  "macaron_choice_8": "Biscoff",
+
+  "sandwich_cake_title": "Voileipäkakut",
+  "sandwich_cake_description": "Voileipäkakut valmistetaan pyöreinä itsetehtyyn leipään. Saatavilla vain yksi koko, jonka riittävyys noin 18-20 henkeä.",
+  "sandwich_cake_choice_1": "kinkku",
+  "sandwich_cake_choice_2": "kalkkuna",
+  "sandwich_cake_choice_3": "texmex broileri (sisältää laktoosia)",
+  "sandwich_cake_choice_4": "lämminsavulohi",
+  "sandwich_cake_choice_5": "kylmäsavuporo",
+  "sandwich_cake_choice_6": "kasvis",
+
+  "bread_title": "Pilvilinnan lautturi",
+  "bread_description": "Laktoositon saaristolaisleipä",
+
+  "info_1": "Teen myös muita makeita ja suolaisia leivonnaisia, kysy tarjousta!",
+  "info_2": "Tuotteet valmistetaan aina laktoosittomista raaka-aineista mahdollisuuksien mukaan, mutta osa esim. täytekakun täytteistä sisältää laktoosia (mm. valkosuklaa). Teen tilauksesta myös gluteenittomia sekä tarvittaessa jonkin verran maidottomia ja munattomia leivonnaisia. Huomioithan kuitenkin, että samassa tilassa käsitellään normaaleja tuotteita (gluteenia sisältävät viljat, maidot, pähkinät...), joten tuotteissa saattaa esiintyä jäämiä. Ilmoitathan aina mahdolliset ruokavaliot/allergiat tilauksen yhteydessä!",
+  "info_3": "En valmista lisenssoituja hahmoja (mm. Frozen, My Little Pony, Ryhmä Hau, Pipsa Possu jne.) tai seurojen logoja tai vastaavis kakkuihin tai kyseisiä kakkuja. Teemaa voidaan mukailla kakuissa ja halutessaan asiakas voi itse lisätä kakkuun esim. koristeeksi käyvän lelun tai muun koristeen.",
+
+  "gallery_title": "Leipomotuotteiden kuvia",
+
+  "circa": "n.",
+  "person": "henkeä",
+  "price_from": "alk.",
+  "pcs": "kpl"
+}

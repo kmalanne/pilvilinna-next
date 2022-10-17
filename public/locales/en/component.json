@@ -1,0 +1,14 @@
+{
+  "carousel": "Testimonial carousel",
+  "carousel_item": "Testimonial carousel item",
+
+  "image_gallery": "Image gallery",
+  "image": "Bakery product image",
+
+  "previous_button": "Previous button",
+  "next_button": "Next button",
+
+  "close_modal_button": "Close modal",
+
+  "language_switch": "Language switch button"
+}
