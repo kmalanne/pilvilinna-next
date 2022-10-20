@@ -156,7 +156,7 @@ const Home = () => {
         <title>{t('title')}</title>
         <meta name="description" content="Pilvilinnan leipomo" />
       </Head>
-      <section className="home" aria-labelledby="title">
+      <section aria-labelledby="title">
         <FluidContainer>
           <Image
             src="/images/hero.jpg"
@@ -188,9 +188,7 @@ const Home = () => {
             <BakerTextWrapper lg={6} md={12}>
               <p>{t('info_1')}</p>
               <p>{t('info_2')}</p>
-              <Signature className="baker-signature">
-                Pilvilinnan Anna
-              </Signature>
+              <Signature>Pilvilinnan Anna</Signature>
             </BakerTextWrapper>
           </Row>
         </BakerContainer>

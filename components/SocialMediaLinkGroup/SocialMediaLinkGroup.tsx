@@ -8,8 +8,8 @@ import {
 } from '@fortawesome/free-brands-svg-icons';
 
 const Link = styled.a`
-  margin-left: 3px;
-  margin-right: 3px;
+  margin-left: 5px;
+  margin-right: 5px;
   color: #454545;
   text-decoration: none;
 
@@ -22,18 +22,28 @@ export const SocialMediaLinkGroup: React.FC = () => {
   const { t } = useTranslation('navigation');
 
   return (
-    <div className="social-nav" aria-label={t('social_navigation')}>
+    <div aria-label={t('social_navigation')}>
       <Link
         href="https://www.facebook.com/Pilvilinnan-leipomo-1541890192566923/"
         target={'_blank'}
+        aria-label="Facebook"
       >
-        <FontAwesomeIcon icon={faFacebookSquare} size="lg"></FontAwesomeIcon>
+        <FontAwesomeIcon
+          icon={faFacebookSquare}
+          size="2x"
+          aria-label="Facebook"
+        ></FontAwesomeIcon>
       </Link>
       <Link
         href="https://www.instagram.com/pilvilinnan_anna/"
         target={'_blank'}
+        aria-label="Instagram"
       >
-        <FontAwesomeIcon icon={faInstagram} size="lg"></FontAwesomeIcon>
+        <FontAwesomeIcon
+          icon={faInstagram}
+          size="2x"
+          aria-label="Instagram"
+        ></FontAwesomeIcon>
       </Link>
     </div>
   );

@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Container } from 'react-bootstrap';
+import { useTranslation } from 'next-i18next';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPhoneAlt, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { SocialMediaLinkGroup } from '../SocialMediaLinkGroup/SocialMediaLinkGroup';
@@ -99,15 +100,20 @@ const RightContainer = styled.div`
 `;
 
 export const Header: React.FC = () => {
+  const { t } = useTranslation('contact');
+
   return (
-    <StyledHeader className="header">
+    <StyledHeader>
       <StyledContainer>
         <LeftContainer>
-          <Link href={`tel:${phoneNumber}`}>
+          <Link href={`tel:${phoneNumber}`} aria-label={t('phone')}>
             <Icon icon={faPhoneAlt} size="lg"></Icon>
             {phoneNumberDisplay}
           </Link>
-          <Link href="mailto:&#105;&#110;&#102;&#111;&#064;&#112;&#105;&#108;&#118;&#105;&#108;&#105;&#110;&#110;&#097;&#110;&#108;&#101;&#105;&#112;&#111;&#109;&#111;&#046;&#102;&#105;">
+          <Link
+            href="mailto:&#105;&#110;&#102;&#111;&#064;&#112;&#105;&#108;&#118;&#105;&#108;&#105;&#110;&#110;&#097;&#110;&#108;&#101;&#105;&#112;&#111;&#109;&#111;&#046;&#102;&#105;"
+            aria-label={t('email')}
+          >
             <Icon icon={faEnvelope} size="lg"></Icon>
             &#105;&#110;&#102;&#111;&#064;&#112;&#105;&#108;&#118;&#105;&#108;&#105;&#110;&#110;&#097;&#110;&#108;&#101;&#105;&#112;&#111;&#109;&#111;&#046;&#102;&#105;
           </Link>

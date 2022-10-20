@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { useTranslation } from 'next-i18next';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 
@@ -37,10 +38,12 @@ const Text = styled.p`
 export const ServiceItem: React.FC<IServiceItemProps> = (
   props: IServiceItemProps
 ) => {
+  const { t } = useTranslation('component');
+
   const { icon, text, title } = props;
 
   return (
-    <Item aria-label="Service" className="service-item">
+    <Item aria-label={t('service')}>
       <FontAwesomeIcon icon={icon} size="4x"></FontAwesomeIcon>
       <Title>{title}</Title>
       <Text>{text}</Text>

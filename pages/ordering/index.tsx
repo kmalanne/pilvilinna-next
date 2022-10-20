@@ -46,7 +46,7 @@ const OrderingAndDelivering = () => {
         <meta name="description" content="Pilvilinnan leipomo tilausehdot" />
       </Head>
       <section aria-labelledby="ordering-title">
-        <Banner imgUrl="/images/banner-3.jpg" text={t('title')}></Banner>
+        <Banner imgSrc="/images/banner-3.jpg" text={t('title')}></Banner>
         <Container>
           <Title id="ordering-title">{t('title')}:</Title>
           <Text>

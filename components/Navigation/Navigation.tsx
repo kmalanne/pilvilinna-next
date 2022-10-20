@@ -14,6 +14,16 @@ import { AppRoute } from '../../utils/route';
 const Nav = styled.nav`
   background-color: #ffffff;
   z-index: 10;
+
+  ${(props) =>
+    props.className === 'sticky'
+      ? `
+  position: fixed;
+  top: 0;
+  width: 100%;
+  box-shadow: 0 2px 2px -2px grey;
+  `
+      : ''};
 `;
 
 const Container = styled(BSContainer)`
@@ -25,13 +35,6 @@ const Container = styled(BSContainer)`
   @media (min-width: 576px) {
     max-width: 100%;
   }
-`;
-
-const StickyNav = styled(Nav)`
-  position: fixed;
-  top: 0;
-  width: 100%;
-  box-shadow: 0 2px 2px -2px grey;
 `;
 
 const Navbar = styled(BSNavbar)`
@@ -270,12 +273,8 @@ export const Navigation: React.FC = () => {
   };
 
   return (
-    <>
-      {sticky ? (
-        <StickyNav ref={containerRef as any}>{renderNavContent()}</StickyNav>
-      ) : (
-        <Nav ref={containerRef as any}>{renderNavContent()}</Nav>
-      )}
-    </>
+    <Nav ref={containerRef as any} className={sticky ? 'sticky' : ''}>
+      {renderNavContent()}
+    </Nav>
   );
 };

@@ -8,6 +8,7 @@ const Switcher = styled.button`
   color: #454545;
   border: none;
   cursor: pointer;
+  font-size: 20px;
 
   &:hover {
     color: #000000;
@@ -27,7 +28,6 @@ export const LanguageSwitcher: React.FC = () => {
 
   return (
     <Switcher
-      className="switcher"
       aria-label="Kielivalinta language change"
       onClick={() => changeLanguage(changeTo)}
     >

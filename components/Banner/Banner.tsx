@@ -1,18 +1,22 @@
 import React from 'react';
 import styled from 'styled-components';
+import Image from 'next/image';
 
 export interface IBannerProps {
   text: string;
-  imgUrl: string;
+  imgSrc: string;
 }
 
 const Container = styled.div`
-  background-size: cover;
-  background-position: center top;
+  position: relative;
   padding: 8rem 2rem;
   margin-bottom: 0px;
   border-radius: 0px;
   opacity: 0.8;
+
+  > span {
+    z-index: -10;
+  }
 `;
 
 const Title = styled.h1`
@@ -21,21 +25,21 @@ const Title = styled.h1`
   font-weight: bold;
   color: #000000;
   opacity: 1;
+  z-index: 1;
 `;
 
 export const Banner: React.FC<IBannerProps> = (props: IBannerProps) => {
-  const { imgUrl, text } = props;
-
-  const style = {
-    backgroundImage: `url(${imgUrl})`,
-  };
+  const { imgSrc, text } = props;
 
   return (
-    <Container
-      aria-labelledby="title"
-      className={`container-fluid`}
-      style={style}
-    >
+    <Container aria-labelledby="title">
+      <Image
+        src={imgSrc}
+        alt={text}
+        layout="fill"
+        objectFit="cover"
+        objectPosition="center"
+      ></Image>
       <Title id="title">{text}</Title>
     </Container>
   );

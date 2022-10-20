@@ -14,8 +14,8 @@ const Contact = () => {
         <title>{t('contact_info')}</title>
         <meta name="description" content="Pilvilinnan leipomo yhteystiedot" />
       </Head>
-      <section className="contact" aria-label={t('contact_info')}>
-        <Banner imgUrl="/images/banner-2.jpg" text={t('contact')}></Banner>
+      <section aria-label={t('contact_info')}>
+        <Banner imgSrc="/images/banner-2.jpg" text={t('contact')}></Banner>
       </section>
     </>
   );
