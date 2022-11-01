@@ -11,10 +11,10 @@ const Contact = () => {
   return (
     <>
       <Head>
-        <title>{t('contact_info')}</title>
-        <meta name="description" content="Pilvilinnan leipomo yhteystiedot" />
+        <title>{t('title')}</title>
+        <meta name="description" content={t('description')} />
       </Head>
-      <section aria-label={t('contact_info')}>
+      <section aria-label={t('title')}>
         <Banner imgSrc="/images/banner-2.jpg" text={t('contact')}></Banner>
       </section>
     </>

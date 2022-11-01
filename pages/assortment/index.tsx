@@ -83,7 +83,7 @@ const Assortment = () => {
     <>
       <Head>
         <title>{t('title')}</title>
-        <meta name="description" content="Pilvilinnan leipomo valikoima" />
+        <meta name="description" content={t('description')} />
       </Head>
       <section aria-labelledby="assortment-title">
         <Banner imgSrc="/images/banner-1.jpg" text={t('banner')}></Banner>

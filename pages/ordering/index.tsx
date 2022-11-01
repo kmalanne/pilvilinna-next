@@ -43,7 +43,7 @@ const OrderingAndDelivering = () => {
     <>
       <Head>
         <title>{t('title')}</title>
-        <meta name="description" content="Pilvilinnan leipomo tilausehdot" />
+        <meta name="description" content={t('description')} />
       </Head>
       <section aria-labelledby="ordering-title">
         <Banner imgSrc="/images/banner-3.jpg" text={t('title')}></Banner>

@@ -154,7 +154,7 @@ const Home = () => {
     <>
       <Head>
         <title>{t('title')}</title>
-        <meta name="description" content="Pilvilinnan leipomo" />
+        <meta name="description" content={t('description')} />
       </Head>
       <section aria-labelledby="title">
         <FluidContainer>
