@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import Image from 'next/image';
+import Image from 'next/legacy/image';
 import Link from 'next/link';
 import Head from 'next/head';
 import { Col, Container, Row } from 'react-bootstrap';
@@ -46,25 +46,31 @@ const HeroText = styled.p`
   z-index: 1;
 `;
 
-const LinkButton = styled.a`
+const LinkButton = styled.div`
   position: relative;
+  display: inline-block;
   z-index: 1;
-  text-decoration: none;
-  color: #454545;
-  font-size: 18px;
-  font-weight: bold;
   padding: 5px 30px;
   line-height: 32px;
   height: auto;
-  display: inline-block;
   text-align: center;
   background-color: #dddddd;
   border-radius: 23px;
+  font-size: 18px;
+  font-weight: bold;
+  
+  > a {
+    color: #454545;
+    text-decoration: none;
+  }
 
   &:hover {
-    color: #dddddd;
     background-color: #454545;
     transition: all 300ms linear !important;
+
+    > a {
+      color: #dddddd;
+    }
   }
 `;
 
@@ -164,12 +170,13 @@ const Home = () => {
             layout="fill"
             objectFit="cover"
             objectPosition="center"
+            priority={true}
           ></Image>
           <Heading id="title">{t('title')}</Heading>
           <HeroText>{t('slogan')}</HeroText>
-          <Link href={AppRoute.Contact} passHref>
-            <LinkButton>{t('contact')}</LinkButton>
-          </Link>
+          <LinkButton>
+            <Link href={AppRoute.Contact}>{t('contact')}</Link>
+          </LinkButton>
         </FluidContainer>
         <BakerContainer>
           <h2 className="sr-only">{t('info_title')}</h2>

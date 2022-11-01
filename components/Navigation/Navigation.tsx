@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import styled from 'styled-components';
-import Image from 'next/image';
+import Image from 'next/legacy/image';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import {
@@ -102,7 +102,7 @@ const Collapse = styled(BSNavbar.Collapse)`
 `;
 
 const NavLeft = styled(BSNav)`
-  > a {
+  > div {
     margin-right: 30px;
 
     &:last-child {
@@ -113,7 +113,7 @@ const NavLeft = styled(BSNav)`
   @media (max-width: 1000px) {
     padding-left: 15px;
 
-    > a {
+    > div {
       margin-right: 15px;
 
       &:last-child {
@@ -126,7 +126,7 @@ const NavLeft = styled(BSNav)`
 const NavRight = styled(BSNav)`
   margin-left: auto;
 
-  > a {
+  > div {
     margin-left: 30px;
 
     &:first-child {
@@ -135,7 +135,7 @@ const NavRight = styled(BSNav)`
   }
 
   @media (max-width: 1000px) {
-    > a {
+    > div {
       margin-left: 15px;
       margin-right: 15px;
 
@@ -150,34 +150,37 @@ const NavRight = styled(BSNav)`
   }
 `;
 
-const StyledLink = styled.a`
+const StyledLink = styled.div`
   position: relative;
-  font-size: 18px;
-  font-weight: 600;
-  text-decoration: none;
-  color: ${(props) => (props.className === 'active' ? '#5e5185' : '#454545')};
-  transition: all 400ms linear 0s;
 
-  &:after {
-    content: '';
-    display: block;
-    width: ${(props) => (props.className === 'active' ? '24px' : '0px')};
-    height: 2px;
-    background: #5e5185;
+  > a {
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: none;
+    color: ${(props) => (props.className === 'active' ? '#5e5185' : '#454545')};
     transition: all 400ms linear 0s;
-  }
-
-  &:hover {
-    color: #5e5185;
 
     &:after {
-      width: 24px;
+      content: '';
+      display: block;
+      width: ${(props) => (props.className === 'active' ? '24px' : '0px')};
+      height: 2px;
+      background: #5e5185;
+      transition: all 400ms linear 0s;
     }
-  }
 
-  @media (max-width: 1000px) {
-    line-height: 44px;
-    border-bottom: 1px solid #dcdcdc;
+    &:hover {
+      color: #5e5185;
+
+      &:after {
+        width: 24px;
+      }
+    }
+
+    @media (max-width: 1000px) {
+      line-height: 44px;
+      border-bottom: 1px solid #dcdcdc;
+    }
   }
 `;
 
@@ -232,38 +235,32 @@ export const Navigation: React.FC = () => {
           <Toggle aria-controls="responsive-navbar-nav" />
           <Collapse id="responsive-navbar-nav">
             <NavLeft className="mr-auto">
-              <Link href={AppRoute.Home} passHref>
-                <StyledLink
-                  className={activeLink(AppRoute.Home, router.pathname)}
-                >
-                  {t('home')}
-                </StyledLink>
-              </Link>
-              <Link href={AppRoute.Assortment} passHref>
-                <StyledLink
-                  className={activeLink(AppRoute.Assortment, router.pathname)}
-                >
-                  {t('assortment')}
-                </StyledLink>
-              </Link>
+              <StyledLink
+                className={activeLink(AppRoute.Home, router.pathname)}
+              >
+                <Link href={AppRoute.Home}>{t('home')}</Link>
+              </StyledLink>
+              <StyledLink
+                className={activeLink(AppRoute.Assortment, router.pathname)}
+              >
+                <Link href={AppRoute.Assortment}>{t('assortment')}</Link>
+              </StyledLink>
             </NavLeft>
             <NavRight>
-              <Link href={AppRoute.Ordering} passHref>
-                <StyledLink
-                  className={activeLink(AppRoute.Ordering, router.pathname)}
-                >
-                  {t('ordering')}
-                </StyledLink>
-              </Link>
-              <Link href={AppRoute.Contact} passHref>
-                <StyledLink
-                  className={activeLink(AppRoute.Contact, router.pathname)}
-                >
-                  {t('contact')}
-                </StyledLink>
-              </Link>
-              <StyledLink href="http://annaj-sukkiajasuklaata.blogspot.com/">
-                {t('blog')}
+              <StyledLink
+                className={activeLink(AppRoute.Ordering, router.pathname)}
+              >
+                <Link href={AppRoute.Ordering}>{t('ordering')}</Link>
+              </StyledLink>
+              <StyledLink
+                className={activeLink(AppRoute.Contact, router.pathname)}
+              >
+                <Link href={AppRoute.Contact}>{t('contact')}</Link>
+              </StyledLink>
+              <StyledLink>
+                <Link href="http://annaj-sukkiajasuklaata.blogspot.com/">
+                  {t('blog')}
+                </Link>
               </StyledLink>
             </NavRight>
           </Collapse>
