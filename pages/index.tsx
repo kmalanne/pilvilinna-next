@@ -58,7 +58,7 @@ const LinkButton = styled.div`
   border-radius: 23px;
   font-size: 18px;
   font-weight: bold;
-  
+
   > a {
     color: #454545;
     text-decoration: none;
