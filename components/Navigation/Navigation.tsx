@@ -238,24 +238,32 @@ export const Navigation: React.FC = () => {
               <StyledLink
                 className={activeLink(AppRoute.Home, router.pathname)}
               >
-                <Link href={AppRoute.Home}>{t('home')}</Link>
+                <Link href={AppRoute.Home} onClick={onToggle}>
+                  {t('home')}
+                </Link>
               </StyledLink>
               <StyledLink
                 className={activeLink(AppRoute.Assortment, router.pathname)}
               >
-                <Link href={AppRoute.Assortment}>{t('assortment')}</Link>
+                <Link href={AppRoute.Assortment} onClick={onToggle}>
+                  {t('assortment')}
+                </Link>
               </StyledLink>
             </NavLeft>
             <NavRight>
               <StyledLink
                 className={activeLink(AppRoute.Ordering, router.pathname)}
               >
-                <Link href={AppRoute.Ordering}>{t('ordering')}</Link>
+                <Link href={AppRoute.Ordering} onClick={onToggle}>
+                  {t('ordering')}
+                </Link>
               </StyledLink>
               <StyledLink
                 className={activeLink(AppRoute.Contact, router.pathname)}
               >
-                <Link href={AppRoute.Contact}>{t('contact')}</Link>
+                <Link href={AppRoute.Contact} onClick={onToggle}>
+                  {t('contact')}
+                </Link>
               </StyledLink>
               <StyledLink>
                 <Link href="http://annaj-sukkiajasuklaata.blogspot.com/">
