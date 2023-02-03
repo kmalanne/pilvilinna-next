@@ -149,7 +149,7 @@ const TestimonialContainer = styled(Container)`
   background-color: #5e5185;
 
   @media (min-width: 1100px) {
-    padding: 6rem 6rem;
+    padding: 6rem 3rem;
   }
 `;
 

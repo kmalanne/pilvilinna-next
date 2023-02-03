@@ -50,7 +50,7 @@ export const TestimonialItem: React.FC<ITestimonialItemProps> = (
   const { author, text } = props;
 
   return (
-    <Item aria-label={t('carousel_item')}>
+    <Item aria-label={t('testimonial_item')}>
       <FontAwesomeIcon icon={faUserCircle} size="4x" inverse></FontAwesomeIcon>
       <Statement>
         <p dangerouslySetInnerHTML={{ __html: text }}></p>
