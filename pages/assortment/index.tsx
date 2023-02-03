@@ -63,7 +63,7 @@ const InfoTextContainer = styled.div`
 `;
 
 const getImages = (): Array<IImageProps> => {
-  let images = [];
+  const images = [];
   for (let i = 1; i < 17; i++) {
     images.push({
       id: i,
