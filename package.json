@@ -7,13 +7,12 @@
     "@fortawesome/free-brands-svg-icons": "^5.15.4",
     "@fortawesome/free-solid-svg-icons": "^5.15.4",
     "@fortawesome/react-fontawesome": "^0.2.0",
-    "next": "^13.0.1",
+    "next": "^13.1.6",
     "next-i18next": "^12.0.1",
     "react": "^18.2.0",
     "react-bootstrap": "^2.5.0",
     "react-dom": "^18.2.0",
-    "styled-components": "^5.3.5",
-    "typescript": "^4.8.3"
+    "styled-components": "^5.3.5"
   },
   "devDependencies": {
     "@types/jest": "^29.0.2",
@@ -22,9 +21,11 @@
     "@types/react-bootstrap": "^0.32.30",
     "@types/react-dom": "^18.0.6",
     "@types/styled-components": "^5.1.26",
-    "eslint-config-next": "^13.0.1",
+    "@typescript-eslint/eslint-plugin": "^5.50.0",
+    "eslint-config-next": "^13.1.6",
     "eslint-plugin-prettier": "^4.2.1",
-    "prettier": "^2.7.1"
+    "prettier": "^2.7.1",
+    "typescript": "^4.8.3"
   },
   "scripts": {
     "dev": "next dev",

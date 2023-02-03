@@ -188,6 +188,8 @@ const activeLink = (url: string, pathname: string) =>
   pathname === url ? 'active' : '';
 
 export const Navigation: React.FC = () => {
+  const { t } = useTranslation('navigation');
+
   const router = useRouter();
   const [expanded, setExpanded] = useState(false);
   const [sticky, setSticky] = useState(false);
@@ -199,8 +201,6 @@ export const Navigation: React.FC = () => {
       window.removeEventListener('scroll', handleScroll);
     };
   });
-
-  const { t } = useTranslation('navigation');
 
   const handleScroll = () => {
     const element = containerRef ? containerRef.current : undefined;

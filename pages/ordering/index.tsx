@@ -36,8 +36,8 @@ const Text = styled.p`
   font-size: 18px;
 `;
 
-const OrderingAndDelivering = () => {
-  const { t } = useTranslation('ordering-and-delivering');
+const Ordering = () => {
+  const { t } = useTranslation('ordering');
 
   return (
     <>
@@ -70,7 +70,7 @@ const OrderingAndDelivering = () => {
 export const getServerSideProps = async ({ locale }: { locale: string }) => ({
   props: {
     ...(await serverSideTranslations(locale, [
-      'ordering-and-delivering',
+      'ordering',
       'component',
       'contact',
       'navigation',
@@ -78,5 +78,5 @@ export const getServerSideProps = async ({ locale }: { locale: string }) => ({
   },
 });
 
-OrderingAndDelivering.Layout = Layout;
-export default OrderingAndDelivering;
+Ordering.Layout = Layout;
+export default Ordering;
