@@ -37,7 +37,7 @@ const Text = styled.p`
 `;
 
 const OrderingAndDelivering = () => {
-  const { t } = useTranslation('ordering');
+  const { t } = useTranslation('ordering-and-delivering');
 
   return (
     <>
@@ -70,10 +70,10 @@ const OrderingAndDelivering = () => {
 export const getServerSideProps = async ({ locale }: { locale: string }) => ({
   props: {
     ...(await serverSideTranslations(locale, [
+      'ordering-and-delivering',
       'component',
       'contact',
       'navigation',
-      'ordering',
     ])),
   },
 });

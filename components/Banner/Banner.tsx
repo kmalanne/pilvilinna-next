@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import Image from "next/legacy/image";
+import Image from 'next/legacy/image';
 
 export interface IBannerProps {
   text: string;
@@ -39,6 +39,7 @@ export const Banner: React.FC<IBannerProps> = (props: IBannerProps) => {
         layout="fill"
         objectFit="cover"
         objectPosition="center"
+        priority={true}
       ></Image>
       <Title id="title">{text}</Title>
     </Container>
