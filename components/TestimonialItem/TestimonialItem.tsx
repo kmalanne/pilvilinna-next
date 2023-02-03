@@ -20,7 +20,6 @@ const Item = styled.div`
 
   @media (max-width: 578px) {
     flex-direction: column;
-    padding: 40px;
 
     svg {
       margin-right: 0px;
