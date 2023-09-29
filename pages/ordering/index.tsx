@@ -7,8 +7,8 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { Layout } from '../../components/Layout/Layout';
 import { Banner } from '../../components/Banner/Banner';
 
-const phoneNumber = process.env.NEXT_PUBLIC_PHONE_NUMBER;
-const phoneNumberDisplay = process.env.NEXT_PUBLIC_PHONE_NUMBER_DISPLAY;
+const phoneNumber = process.env.NEXT_PUBLIC__PHONE_NUMBER;
+const phoneNumberDisplay = process.env.NEXT_PUBLIC__PHONE_NUMBER_DISPLAY;
 
 const Container = styled(BSContainer)`
   margin-right: 0px;
@@ -55,7 +55,7 @@ const Ordering = () => {
               &#105;&#110;&#102;&#111;&#064;&#112;&#105;&#108;&#118;&#105;&#108;&#105;&#110;&#110;&#097;&#110;&#108;&#101;&#105;&#112;&#111;&#109;&#111;&#046;&#102;&#105;
             </a>{' '}
             {t('info_2')}{' '}
-            <a href={`tel:${phoneNumber}`}>{phoneNumberDisplay}</a>
+            <a href={`tel:${phoneNumber}`}>{phoneNumberDisplay}</a>.
           </Text>
           <Text>{t('info_3')}</Text>
           <Text>{t('info_4')}</Text>
