@@ -6,24 +6,21 @@
 
   "heading": "ASSORTMENT AND PRICING, prices including VAT (14%)",
 
-  "unique_cake_title": "Unique stuffed cakes täytekakut",
-  "unique_cake_description_1": "The filled cakes are made by hand according to the customer's wishes. The cakes are filled with curd or butter cream cheese-based mousses gelled with gelatin. In a cake for 10-12 people, 1 mousse and for larger cakes, 2 mousses. The topping is flavored meringue buttercream unless otherwise requested. As a base, you can choose a light or cocoa base. The final price is determined by the decoration of the cake.",
-  "unique_cake_description_2": "Cake menu for cakes for 18-20 people and about 25-30 people (applying to 10-12 people)",
-  "unique_cake_choice_1": "Raspberry seduction (light base, raspberry mousse and white chocolate mousse with white chocolate crumb)",
-  "unique_cake_choice_2": "Whisper of caramel (light base, caramel mousse with raspberries and raspberry mousse)",
-  "unique_cake_choice_3": "Walk in the forest (light base, vanilla mousse with lingonberries and caramel mousse)",
-  "unique_cake_choice_4": "Sweet and sour (light base, lemon mousse and caramel mousse with salty milk chocolate crumb)",
-  "unique_cake_choice_5": "Grandmother's blueberry pie (light base, blueberry cardamom mousse and vanilla mousse with blueberries)",
-  "unique_cake_choice_6": "Call of tropic (light base, strawberry-lime mousse and mango-pineapple mousse (in summer: mango mousse with strawberries))",
-  "unique_cake_choice_7": "The enchantment of licorice (light base, licorice mousse with raspberries and raspberry mousse)",
-  "unique_cake_choice_8": "Strawberry summer (light base, strawberry mousse, lemon mousse with strawberries) available for the summer strawberry season",
-  "unique_cake_choice_9": "Dreams come true (your own optional base and 1-2 fillings according to your wishes)",
+  "unique_cake_title": "Unique stuffed cakes",
+  "unique_cake_description_1": "The unique filled cakes are made by hand according to the customer's wishes. The cake menu, which changes three times a year, offers cakes with current and seasonal flavors. You can also always choose your favorite Dream come true option, in which case you will get a cake that suits your taste. I use vanilla meringue buttercream as the icing on the cakes. For cakes, for an additional price, a sugar paste figure 5€/ figure and gold leaf 2-10€ depending on the quantity. Very generous decorations, e.g. with real flowers, also increase the price of the cake.",
+  "unique_cake_description_2": "Cake menu 3/2023 (cakes also available gluten-free if needed)",
+  "unique_cake_choice_1": "On a forest trip (light butter cake base, quince mousse, lingonberry compote, oat biscuit crumble), lactose-free",
+  "unique_cake_choice_2": "Apple thieves (light butter cake base flavored with cinnamon, vanilla mousse, apple compote, Biscoff paste), lactose-free",
+  "unique_cake_choice_3": "Fall morning (cinnamon flavored cocoa base, coffee mousse, orange jam, dark chocolate grits), lactose-free",
+  "unique_cake_choice_4": "Just Pätkis (cocoa base, Pätkis mousse, Pätkis groats)",
+  "unique_cake_choice_5": "A hint of Christmas (light butter cake base flavored with gingerbread spice, plum mousse, apricot jam, peppermint), lactose-free",
+  "unique_cake_choice_6": "Dreams come true (light butter cake base or cocoa base, optional mousse and side dish)",
 
   "mousse_cake_title": "Biscuit based mousse cakes",
-  "mousse_cake_description": "Mousse cakes have curd or cream cheese-based gelatin-cooled mousses and a biscuit base. Flavours similar to stuffed cakes.",
+  "mousse_cake_description": "Mousse cakes have gelatinized mousses and a biscuit base.",
 
   "chocolate_cake_title": "Pilvilinna's chocolate cake",
-  "chocolate_cake_description_1": "The best chocolate cake in the world, with cherry jam and mascarpone chocolate mousse between the succulent chocolate base and a perfect chocolate icing on top.",
+  "chocolate_cake_description_1": "The best chocolate cake in the world, with cherry jam and mascarpone chocolate mousse flavored with a hint of rum between a luscious chocolate base and a perfect chocolate glaze on top. Dimensioning for about 12 people.",
   "chocolate_cake_description_2": "You can also buy a Pilvilinna chocolate cake recipe (delivered by email) for the price",
 
   "cupcake_title": "Cupcakes / mini cupcakes",
@@ -48,7 +45,7 @@
 
   "cookie_title": "Cookies",
   "cookie_choice_1": "chocolate chip",
-  "cookie_choice_2": "chocolate",
+  "cookie_choice_2": "brownie",
 
   "macaron_title": "Macarons",
   "macaron_description": "Order batch (also minimum) 24pcs per flavour, (color can be selected according to wishes) ",
@@ -66,9 +63,9 @@
   "sandwich_cake_choice_1": "ham",
   "sandwich_cake_choice_2": "turkey",
   "sandwich_cake_choice_3": "texmex chicken (contains lactose)",
-  "sandwich_cake_choice_4": "warm smoked salmong",
-  "sandwich_cake_choice_5": "cold smoked reindeer",
-  "sandwich_cake_choice_6": "vegetable",
+  "sandwich_cake_choice_4": "feta sun-dried tomato",
+  "sandwich_cake_choice_5": "warm smoked salmong",
+  "sandwich_cake_choice_6": "cold smoked reindeer",
 
   "bread_title": "Pilvilinnan lautturi",
   "bread_description": "Lactose free archipelago bread",

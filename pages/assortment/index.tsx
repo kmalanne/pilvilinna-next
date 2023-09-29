@@ -92,19 +92,22 @@ const Assortment = () => {
           <ItemHeader>
             <ItemHeaderText>
               {t('unique_cake_title')}{' '}
-              <ItemHeaderPrice>{t('price_from')} 90€</ItemHeaderPrice>
+              <ItemHeaderPrice>{t('price_from')} 98€</ItemHeaderPrice>
             </ItemHeaderText>
           </ItemHeader>
           <p>{t('unique_cake_description_1')}</p>
           <ul>
             <ListItem>
-              10-12 {t('person')} <strong>90,00€</strong>
+              {t('circa')} 10 {t('person')} {t('price_from')}{' '}
+              <strong>90,00€</strong>
             </ListItem>
             <ListItem>
-              18-20 {t('person')} <strong>120,00€</strong>
+              {t('circa')} 20 {t('person')} {t('price_from')}{' '}
+              <strong>135,00€</strong>
             </ListItem>
             <ListItem>
-              25-30 {t('person')} <strong>140,00€</strong>
+              {t('circa')} 30 {t('person')} {t('price_from')}{' '}
+              <strong>175,00€</strong>
             </ListItem>
           </ul>
           <Text>{t('unique_cake_description_2')}</Text>
@@ -115,23 +118,17 @@ const Assortment = () => {
             <ListItem>{t('unique_cake_choice_4')}</ListItem>
             <ListItem>{t('unique_cake_choice_5')}</ListItem>
             <ListItem>{t('unique_cake_choice_6')}</ListItem>
-            <ListItem>{t('unique_cake_choice_7')}</ListItem>
-            <ListItem>{t('unique_cake_choice_8')}</ListItem>
-            <ListItem>{t('unique_cake_choice_9')}</ListItem>
           </ul>
           <ItemHeader>
             <ItemHeaderText>
               {t('mousse_cake_title')}{' '}
-              <ItemHeaderPrice>{t('price_from')} 65€</ItemHeaderPrice>
+              <ItemHeaderPrice>{t('price_from')} 80€</ItemHeaderPrice>
             </ItemHeaderText>
           </ItemHeader>
           <Text>{t('mousse_cake_description')}</Text>
           <ul>
             <ListItem>
-              {t('circa')} 10 {t('person')} <strong>65,00€</strong>
-            </ListItem>
-            <ListItem>
-              {t('circa')} 15 {t('person')} <strong>85,00€</strong>
+              {t('circa')} 12 {t('person')} <strong>80,00€</strong>
             </ListItem>
           </ul>
           <ItemHeader>
@@ -210,22 +207,22 @@ const Assortment = () => {
           <Text>{t('sandwich_cake_description')}</Text>
           <ul>
             <ListItem>
-              {t('sandwich_cake_choice_1')} <strong>110€</strong>
+              {t('sandwich_cake_choice_1')} <strong>125€</strong>
             </ListItem>
             <ListItem>
-              {t('sandwich_cake_choice_2')} <strong>110€</strong>
+              {t('sandwich_cake_choice_2')} <strong>125€</strong>
             </ListItem>
             <ListItem>
-              {t('sandwich_cake_choice_3')} <strong>110€</strong>
+              {t('sandwich_cake_choice_3')} <strong>125€</strong>
             </ListItem>
             <ListItem>
               {t('sandwich_cake_choice_4')} <strong>125€</strong>
             </ListItem>
             <ListItem>
-              {t('sandwich_cake_choice_5')} <strong>125€</strong>
+              {t('sandwich_cake_choice_5')} <strong>155€</strong>
             </ListItem>
             <ListItem>
-              {t('sandwich_cake_choice_6')} <strong>110€</strong>
+              {t('sandwich_cake_choice_6')} <strong>155€</strong>
             </ListItem>
           </ul>
           <ItemHeader>

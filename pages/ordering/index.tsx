@@ -48,7 +48,7 @@ const Ordering = () => {
       <section aria-labelledby="ordering-title">
         <Banner imgSrc="/images/banner-3.jpg" text={t('title')}></Banner>
         <Container>
-          <Title id="ordering-title">{t('title')}:</Title>
+          <Title id="ordering-title">{t('title_2')}:</Title>
           <Text>
             {t('info_1')}{' '}
             <a href="mailto:&#105;&#110;&#102;&#111;&#064;&#112;&#105;&#108;&#118;&#105;&#108;&#105;&#110;&#110;&#097;&#110;&#108;&#101;&#105;&#112;&#111;&#109;&#111;&#046;&#102;&#105;">
@@ -59,8 +59,24 @@ const Ordering = () => {
           </Text>
           <Text>{t('info_3')}</Text>
           <Text>{t('info_4')}</Text>
-          <Text>{t('info_5')}</Text>
-          <Text>{t('info_6')}</Text>
+          <Title id="delivery-title">{t('title_3')}:</Title>
+          <Text>
+            <strong>{t('info_5')}</strong>
+            {t('info_6')}
+          </Text>
+          <Title id="payment-title">{t('title_4')}:</Title>
+          <Text>
+            <strong>{t('info_7')}</strong>
+            {t('info_8')}
+          </Text>
+          <Text>
+            {t('info_9')}
+            <a href={`tel:${phoneNumber}`}>{phoneNumberDisplay}</a>
+            {t('info_10')}
+            <strong>{t('info_11')}</strong>
+          </Text>
+          <Text>{t('info_12')}</Text>
+          <Text>{t('info_13')}</Text>
         </Container>
       </section>
     </>
