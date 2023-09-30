@@ -1,10 +1,125 @@
 {
+  "plugins": ["@typescript-eslint"],
   "extends": [
     "next/core-web-vitals",
-    "plugin:@typescript-eslint/recommended",
-    "prettier"
+    "prettier",
+    "plugin:react/jsx-runtime"
   ],
+  "ignorePatterns": ["/docs"],
   "rules": {
-    "@typescript-eslint/no-explicit-any": "off"
-  }
+    "arrow-body-style": ["error", "as-needed"],
+    "curly": "error",
+    "line-comment-position": [
+      2,
+      {
+        "position": "above"
+      }
+    ],
+    "no-else-return": "error",
+    "no-unneeded-ternary": "error",
+    "no-var-requires": "off",
+    "prefer-const": "error",
+    "sort-imports": [
+      "error",
+      {
+        "ignoreCase": false,
+        "ignoreDeclarationSort": true,
+        "ignoreMemberSort": false,
+        "memberSyntaxSortOrder": ["none", "all", "multiple", "single"],
+        "allowSeparatedGroups": true
+      }
+    ],
+    "import/no-unresolved": "error",
+    "import/order": [
+      "error",
+      {
+        "alphabetize": {
+          "caseInsensitive": true,
+          "order": "asc"
+        },
+        "groups": ["builtin", "external", "internal", ["sibling", "parent"], "index", "unknown"],
+        "newlines-between": "always",
+        "pathGroups": [
+          {
+            "group": "external",
+            "pattern": "@fortum/**",
+            "position": "after"
+          }
+        ],
+        "pathGroupsExcludedImportTypes": ["builtin"]
+      }
+    ],
+    "react/jsx-curly-brace-presence": [
+      "error",
+      { "props": "never", "children": "never", "propElementValues": "always" }
+    ],
+    "import/no-anonymous-default-export": ["error", { "allowObject": true }],
+    "no-console": [
+      "warn",
+      {
+        "allow": ["error"]
+      }
+    ]
+  },
+  "overrides": [
+    {
+      "files": ["*.ts", "*.tsx"],
+      "extends": [
+        "plugin:@typescript-eslint/recommended",
+        "plugin:@typescript-eslint/recommended-requiring-type-checking"
+      ],
+      "parserOptions": {
+        "project": ["./tsconfig.json"]
+      },
+      "rules": {
+        "@typescript-eslint/no-unused-vars": ["error", { "ignoreRestSiblings": true }],
+        "@typescript-eslint/no-explicit-any": "error",
+        "@typescript-eslint/naming-convention": [
+          2,
+          {
+            "selector": "interface",
+            "format": ["PascalCase"]
+          },
+          {
+            "selector": "variable",
+            "format": ["PascalCase", "camelCase", "UPPER_CASE"],
+            "leadingUnderscore": "allow"
+          },
+          {
+            "selector": "typeParameter",
+            "format": ["PascalCase"]
+          },
+          {
+            "selector": "variable",
+            "format": ["PascalCase", "camelCase", "UPPER_CASE"],
+            "types": ["boolean"],
+            "prefix": ["is", "should", "has", "can", "did", "will", "was"],
+            "leadingUnderscore": "allow"
+          },
+          {
+            "selector": "enum",
+            "format": ["PascalCase"]
+          },
+          {
+            "selector": "enumMember",
+            "format": ["PascalCase", "camelCase"]
+          }
+        ],
+        "@typescript-eslint/consistent-type-imports": [
+          "error",
+          {
+            "prefer": "type-imports"
+          }
+        ],
+        "@typescript-eslint/no-misused-promises": [
+          2,
+          {
+            "checksVoidReturn": {
+              "attributes": false
+            }
+          }
+        ]
+      }
+    }
+  ]
 }

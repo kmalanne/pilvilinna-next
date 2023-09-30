@@ -1,0 +1,24 @@
+body {
+  margin: 0;
+  font-family: 'Josefin Slab', serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f0f3f8;
+}
+
+#root {
+  height: 100vh;
+}
+
+nav.sticky + main {
+  padding-top: 85px;
+}
+
+.sr-only {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
