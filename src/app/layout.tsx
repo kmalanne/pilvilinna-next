@@ -43,8 +43,8 @@ export const metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="fi" className={josefinSlab.className}>
-      <body>
+    <html lang="fi">
+      <body className={josefinSlab.className}>
         <Header />
         <Navigation />
         <main>{children}</main>

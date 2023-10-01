@@ -1,0 +1,106 @@
+/* Header Styles */
+.Header {
+  background-color: #f0f0f0;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .Header {
+    height: 100px;
+  }
+}
+
+@media (max-width: 500px) {
+  .Header {
+    height: 130px;
+  }
+}
+
+/* Container Styles */
+.Container {
+  display: flex;
+  flex-direction: row;
+  margin-right: 0px;
+  margin-left: 0px;
+  max-width: 100%;
+}
+
+@media (max-width: 768px) {
+  .Container {
+    flex-direction: column;
+  }
+}
+
+/* Link Styles */
+.Link {
+  position: relative;
+  top: 3px;
+  color: #454545;
+  text-decoration: none;
+}
+
+.Link:hover {
+  color: #000000;
+  text-decoration: underline;
+}
+
+/* Icon Styles */
+.Icon {
+  margin-right: 10px;
+}
+
+/* LeftContainer Styles */
+.LeftContainer > a:last-child {
+  margin-left: 30px;
+}
+
+@media (max-width: 768px) {
+  .LeftContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 500px) {
+  .LeftContainer {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+
+  .LeftContainer > a {
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+}
+
+/* RightContainer Styles */
+.RightContainer {
+  display: flex;
+  flex-direction: row;
+  margin-left: auto;
+}
+
+@media (max-width: 768px) {
+  .RightContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 0px;
+  }
+}
+
+@media (max-width: 500px) {
+  .RightContainer {
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+}

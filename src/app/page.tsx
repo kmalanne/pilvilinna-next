@@ -1,15 +1,22 @@
 'use client'
 
 import { faBirthdayCake, faBreadSlice, faCookie } from '@fortawesome/free-solid-svg-icons'
-import Head from 'next/head'
+// import type { Metadata } from 'next'
 import Image from 'next/legacy/image'
 import Link from 'next/link'
 import { Col, Container, Row } from 'react-bootstrap'
 import styled from 'styled-components'
 
+import { AppRoute } from '@/utils/route'
+import { strings } from '@/utils/strings'
+
 import { ServiceItem } from '../components/ServiceItem/ServiceItem'
 import { TestimonialItem } from '../components/TestimonialItem/TestimonialItem'
-import { AppRoute } from '../utils/route'
+
+// export const metadata: Metadata = {
+//   title: strings.home.title,
+//   description: strings.home.description,
+// }
 
 const FluidContainer = styled.div`
   position: relative;
@@ -156,95 +163,89 @@ const TestimonialCol = styled(Col)`
 `
 
 const Home = () => (
-  <>
-    <Head>
-      <title>title</title>
-      <meta name="description" content="description" />
-    </Head>
-    <section aria-labelledby="title">
-      <FluidContainer>
-        <Image
-          src="/images/hero.jpg"
-          alt="hero"
-          layout="fill"
-          objectFit="cover"
-          objectPosition="center"
-          priority={true}
-        ></Image>
-        <Heading id="title">title</Heading>
-        <HeroText>slogan</HeroText>
-        <LinkButton>
-          <Link href={AppRoute.Contact}>contact</Link>
-        </LinkButton>
-      </FluidContainer>
-      <BakerContainer>
-        <h2 className="sr-only">info_title</h2>
-        <Row>
-          <ImageWrapper lg={6} md={12}>
-            <Image
-              src="/images/anna.jpg"
-              width={483}
-              height={746}
-              layout="responsive"
-              loading="lazy"
-              objectFit="contain"
-              alt="Baker and owner of Pilvilinnan leipomo"
-            />
-          </ImageWrapper>
-          <BakerTextWrapper lg={6} md={12}>
-            <p>info_1</p>
-            <p>info_2</p>
-            <Signature>Pilvilinnan Anna</Signature>
-          </BakerTextWrapper>
-        </Row>
-      </BakerContainer>
-      <ServiceContainer>
-        <ServiceTitle>assortment_title</ServiceTitle>
-        <Row>
-          <Col sm={12} md={4}>
-            <ServiceItem
-              icon={faBirthdayCake}
-              title="assortment_choice_1_title"
-              text="assortment_choice_1_description"
-            />
-          </Col>
-          <Col sm={12} md={4}>
-            <ServiceItem
-              icon={faBreadSlice}
-              title="assortment_choice_2_title"
-              text="assortment_choice_2_description"
-            />
-          </Col>
-          <Col sm={12} md={4}>
-            <ServiceItem
-              icon={faCookie}
-              title="assortment_choice_3_title"
-              text="assortment_choice_3_description"
-            />
-          </Col>
-        </Row>
-      </ServiceContainer>
-      <TestimonialContainer>
-        <h2 className="sr-only">testimonial_title</h2>
-        <Row>
-          <TestimonialCol sm={12} md={6}>
-            <TestimonialItem text="testimonial_1" author="Essi, Tampere" />
-          </TestimonialCol>
-          <TestimonialCol sm={12} md={6}>
-            <TestimonialItem text="testimonial_2" author="Mari, Ylöjärvi" />
-          </TestimonialCol>
-        </Row>
-        <Row>
-          <TestimonialCol sm={12} md={6}>
-            <TestimonialItem text="testimonial_3" author="Sanna, Pirkkala" />
-          </TestimonialCol>
-          <TestimonialCol sm={12} md={6}>
-            <TestimonialItem text="testimonial_4" author="Jonna, Nokia" />
-          </TestimonialCol>
-        </Row>
-      </TestimonialContainer>
-    </section>
-  </>
+  <section aria-labelledby="title">
+    <FluidContainer>
+      <Image
+        src="/images/hero.jpg"
+        alt="hero"
+        layout="fill"
+        objectFit="cover"
+        objectPosition="center"
+        priority={true}
+      ></Image>
+      <Heading id="title">{strings.home.title}</Heading>
+      <HeroText>{strings.home.slogan}</HeroText>
+      <LinkButton>
+        <Link href={AppRoute.Contact}>{strings.contact.contact}</Link>
+      </LinkButton>
+    </FluidContainer>
+    <BakerContainer>
+      <h2 className="sr-only">{strings.home.about}</h2>
+      <Row>
+        <ImageWrapper lg={6} md={12}>
+          <Image
+            src="/images/anna.jpg"
+            width={483}
+            height={746}
+            layout="responsive"
+            loading="lazy"
+            objectFit="contain"
+            alt="Pilvilinnan leipomo leipuri ja omistaja"
+          />
+        </ImageWrapper>
+        <BakerTextWrapper lg={6} md={12}>
+          <p>info_1</p>
+          <p>info_2</p>
+          <Signature>{strings.home.signature}</Signature>
+        </BakerTextWrapper>
+      </Row>
+    </BakerContainer>
+    <ServiceContainer>
+      <ServiceTitle>assortment_title</ServiceTitle>
+      <Row>
+        <Col sm={12} md={4}>
+          <ServiceItem
+            icon={faBirthdayCake}
+            title="assortment_choice_1_title"
+            text="assortment_choice_1_description"
+          />
+        </Col>
+        <Col sm={12} md={4}>
+          <ServiceItem
+            icon={faBreadSlice}
+            title="assortment_choice_2_title"
+            text="assortment_choice_2_description"
+          />
+        </Col>
+        <Col sm={12} md={4}>
+          <ServiceItem
+            icon={faCookie}
+            title="assortment_choice_3_title"
+            text="assortment_choice_3_description"
+          />
+        </Col>
+      </Row>
+    </ServiceContainer>
+    <TestimonialContainer>
+      <h2 className="sr-only">testimonial_title</h2>
+      <Row>
+        <TestimonialCol sm={12} md={6}>
+          <TestimonialItem text="testimonial_1" author="Essi, Tampere" />
+        </TestimonialCol>
+        <TestimonialCol sm={12} md={6}>
+          <TestimonialItem text="testimonial_2" author="Mari, Ylöjärvi" />
+        </TestimonialCol>
+      </Row>
+      <Row>
+        <TestimonialCol sm={12} md={6}>
+          <TestimonialItem text="testimonial_3" author="Sanna, Pirkkala" />
+        </TestimonialCol>
+        <TestimonialCol sm={12} md={6}>
+          <TestimonialItem text="testimonial_4" author="Jonna, Nokia" />
+        </TestimonialCol>
+      </Row>
+    </TestimonialContainer>
+  </section>
 )
 
 export default Home

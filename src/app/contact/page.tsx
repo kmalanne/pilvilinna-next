@@ -1,19 +1,18 @@
-'use client'
+import type { Metadata } from 'next'
 
-import Head from 'next/head'
+import { strings } from '@/utils/strings'
 
 import { Banner } from '../../components/Banner/Banner'
 
+export const metadata: Metadata = {
+  title: strings.contact.title,
+  description: strings.contact.description,
+}
+
 const Contact = () => (
-  <>
-    <Head>
-      <title>title</title>
-      <meta name="description" content="description" />
-    </Head>
-    <section aria-label="title">
-      <Banner imgSrc="/images/banner-2.jpg" text="contact"></Banner>
-    </section>
-  </>
+  <section aria-label={strings.contact.title}>
+    <Banner imgSrc="/images/banner-2.jpg" text={strings.contact.contact}></Banner>
+  </section>
 )
 
 export default Contact

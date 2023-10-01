@@ -2,9 +2,9 @@ import { faChevronLeft, faChevronRight, faTimes } from '@fortawesome/free-solid-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import type React from 'react'
 import { useEffect, useState } from 'react'
-import ReactDOM from 'react-dom'
-import styled from 'styled-components'
+import { createPortal } from 'react-dom'
 
+import styles from './lightbox.module.css'
 import type { IImageProps } from '../Image/Image'
 import { NextImage as Image } from '../Image/Image'
 
@@ -13,67 +13,6 @@ export interface ILightboxProps {
   images: Array<IImageProps>
   onClose: () => void
 }
-
-const Backdrop = styled.div`
-  position: fixed;
-  z-index: 999;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
-`
-
-const Container = styled.div`
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-`
-
-const Content = styled.div`
-  max-width: 1024px;
-`
-
-const Button = styled.button`
-  z-index: 1000;
-  background: 0 0;
-  border: 0;
-  cursor: pointer;
-  outline: none;
-  overflow: hidden;
-
-  &:focus {
-    outline: none;
-  }
-`
-
-const PrevButton = styled(Button)`
-  position: absolute;
-  top: 48%;
-  left: 10px;
-  color: #ffffff;
-`
-
-const NextButton = styled(Button)`
-  position: absolute;
-  top: 48%;
-  right: 10px;
-  color: #ffffff;
-`
-
-const CloseButton = styled(Button)`
-  position: absolute;
-  right: 0;
-  top: 5px;
-`
-
-const CloseText = styled.span`
-  position: absolute;
-  width: 1px;
-  overflow: hidden;
-`
 
 export const Lightbox: React.FC<ILightboxProps> = (props: ILightboxProps) => {
   const { current, images, onClose } = props
@@ -179,6 +118,7 @@ export const Lightbox: React.FC<ILightboxProps> = (props: ILightboxProps) => {
         loading="eager"
         onClick={onClickImage}
         src={image.src}
+        alt={image.alt}
       />
     )
   }
@@ -189,9 +129,13 @@ export const Lightbox: React.FC<ILightboxProps> = (props: ILightboxProps) => {
     }
 
     return (
-      <PrevButton aria-label="previous_button" onClick={onClickPrev}>
+      <button
+        className={`${styles.Button} ${styles.PrevButton}`}
+        aria-label="previous_button"
+        onClick={onClickPrev}
+      >
         <FontAwesomeIcon icon={faChevronLeft} size="2x" title="previous_button"></FontAwesomeIcon>
-      </PrevButton>
+      </button>
     )
   }
 
@@ -201,29 +145,37 @@ export const Lightbox: React.FC<ILightboxProps> = (props: ILightboxProps) => {
     }
 
     return (
-      <NextButton aria-label="next_button" onClick={onClickNext}>
+      <button
+        className={`${styles.Button} ${styles.NextButton}`}
+        aria-label="next_button"
+        onClick={onClickNext}
+      >
         <FontAwesomeIcon icon={faChevronRight} size="2x" title="next_button"></FontAwesomeIcon>
-      </NextButton>
+      </button>
     )
   }
 
-  return ReactDOM.createPortal(
-    <Backdrop>
-      <Container id="lightbox" onClick={onClickBackdrop}>
-        <CloseButton aria-label="close_modal_button" onClick={onClickClose}>
-          <CloseText>Close</CloseText>
+  return createPortal(
+    <div className={styles.Backdrop}>
+      <div className={styles.Container} id="lightbox" onClick={onClickBackdrop}>
+        <button
+          className={`${styles.Button} ${styles.CloseButton}`}
+          aria-label="close_modal_button"
+          onClick={onClickClose}
+        >
+          <span className={styles.CloseText}>Close</span>
           <FontAwesomeIcon
             icon={faTimes}
             size="2x"
             inverse
             title="close_modal_button"
           ></FontAwesomeIcon>
-        </CloseButton>
-        <Content>{renderImage()}</Content>
+        </button>
+        <div className={styles.Content}>{renderImage()}</div>
         {renderPrevArrow()}
         {renderNextArrow()}
-      </Container>
-    </Backdrop>,
+      </div>
+    </div>,
     document.body,
   )
 }

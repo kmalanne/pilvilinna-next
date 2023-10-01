@@ -1,0 +1,196 @@
+/* Nav Styles */
+.Nav {
+  background-color: #ffffff;
+  z-index: 10;
+}
+
+.Nav.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  box-shadow: 0 2px 2px -2px grey;
+}
+
+/* Container Styles */
+.Container {
+  @media (max-width: 1000px) {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  @media (min-width: 576px) {
+    max-width: 100%;
+  }
+}
+
+/* Navbar Styles */
+.Navbar {
+  height: 85px;
+  padding: 0;
+}
+
+/* Brand Styles */
+.Brand {
+  .navbar-brand {
+    position: absolute;
+    left: 50%;
+    top: 0px;
+    transform: translateX(-50%);
+    margin-right: 0px;
+    z-index: 30;
+  }
+}
+
+@media (max-width: 1000px) {
+  .Brand {
+    .navbar-brand {
+      position: relative;
+      left: 0%;
+      top: 0px;
+      transform: translateX(-0%);
+      padding-left: 15px;
+    }
+  }
+}
+
+/* ImageWrapper Styles */
+.ImageWrapper {
+  position: relative;
+  width: 160px;
+  height: 160px;
+}
+
+.ImageWrapper > span {
+  border-radius: 50%;
+  box-shadow: 0 5px 2px -2px grey;
+}
+
+@media (max-width: 1000px) {
+  .ImageWrapper {
+    width: 60px;
+    height: 60px;
+  }
+
+  .ImageWrapper > span {
+    border-radius: 50%;
+  }
+}
+
+/* Toggle Styles */
+.Toggle {
+  margin: 0px;
+  padding: 0px;
+  margin-top: 28px;
+  margin-bottom: 28px;
+  border: none;
+  outline: none;
+}
+
+@media (max-width: 1000px) {
+  .Toggle {
+    margin-right: 15px;
+  }
+}
+
+/* Collapse Styles */
+.Collapse {
+  background-color: #ffffff;
+  z-index: 20;
+}
+
+@media (max-width: 1000px) {
+  .Collapse {
+    margin-top: -1px;
+  }
+}
+
+/* NavLeft Styles */
+.NavLeft > div {
+  margin-right: 30px;
+}
+
+.NavLeft > div:last-child {
+  margin-right: 0px;
+}
+
+@media (max-width: 1000px) {
+  .NavLeft {
+    padding-left: 15px;
+  }
+
+  .NavLeft > div {
+    margin-right: 15px;
+  }
+
+  .NavLeft > div:last-child {
+    margin-right: 15px;
+  }
+}
+
+/* NavRight Styles */
+.NavRight {
+  margin-left: auto;
+}
+
+.NavRight > div {
+  margin-left: 30px;
+}
+
+.NavRight > div:first-child {
+  margin-left: 0px;
+}
+
+@media (max-width: 1000px) {
+  .NavRight > div {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+
+  .NavRight > div:first-child {
+    margin-left: 15px;
+  }
+
+  .NavRight > div:last-child {
+    border-bottom: none;
+  }
+}
+
+/* Link Styles */
+.Link {
+  position: relative;
+}
+
+.Link > a {
+  font-size: 18px;
+  font-weight: 600;
+  text-decoration: none;
+  color: #454545;
+  transition: all 400ms linear 0s;
+}
+
+.Link.active > a {
+  color: #5e5185;
+}
+
+.Link > a:after {
+  content: '';
+  display: block;
+  width: 0px;
+  height: 2px;
+  background: #5e5185;
+  transition: all 400ms linear 0s;
+}
+
+.Link > a:hover {
+  color: #5e5185;
+}
+
+.Link.active > a:after {
+  width: 24px;
+}
+
+@media (max-width: 1000px) {
+  .Link > a {
+    line-height: 44px;
+  }
+}

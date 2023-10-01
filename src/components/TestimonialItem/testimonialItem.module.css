@@ -1,0 +1,39 @@
+/* Item Styles */
+.Item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.Item svg {
+  margin-right: 20px;
+}
+
+@media (max-width: 578px) {
+  .Item {
+    flex-direction: column;
+  }
+
+  .Item svg {
+    margin-right: 0px;
+    margin-bottom: 20px;
+  }
+}
+
+/* Statement Styles */
+.Statement {
+  font-size: 22px;
+  color: #ffffff;
+}
+
+@media (max-width: 578px) {
+  .Statement {
+    margin-bottom: 40px;
+  }
+}
+
+/* Author Styles */
+.Author {
+  margin-top: 10px;
+  font-weight: 600;
+}

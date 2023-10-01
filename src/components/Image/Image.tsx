@@ -10,10 +10,11 @@ export interface IImageProps {
   loading: Loading
   onClick?: (id: number) => void
   src: string
+  alt?: string
 }
 
 export const NextImage: React.FC<IImageProps> = (props: IImageProps) => {
-  const { id, layout, loading, onClick, src } = props
+  const { id, layout, loading, onClick, src, alt = 'image' } = props
 
   const onImageClick = (event: React.MouseEvent<HTMLElement> | React.TouchEvent<HTMLElement>) => {
     if (event) {
@@ -35,7 +36,7 @@ export const NextImage: React.FC<IImageProps> = (props: IImageProps) => {
         layout={layout}
         loading={loading}
         onClick={onImageClick}
-        alt="image"
+        alt={alt}
       />
     </React.Fragment>
   )

@@ -1,0 +1,46 @@
+/* Container Styles */
+.Container {
+  padding: 30px 50px;
+}
+
+/* Col Styles */
+.Col {
+  text-align: center;
+}
+
+@media (max-width: 576px) {
+  .Col {
+    margin-bottom: 15px;
+  }
+}
+
+/* Heading Styles */
+.Heading {
+  font-weight: 600;
+}
+
+/* Text Styles */
+.Text {
+  margin-bottom: 0px;
+}
+
+/* Link Styles */
+.Link {
+  color: #454545;
+  text-decoration: none;
+}
+
+.Link:hover {
+  color: #000000;
+  text-decoration: underline;
+}
+
+/* SocialMediaCol Styles */
+.SocialMediaCol {
+  text-align: center;
+}
+
+.SocialMediaCol a {
+  margin-left: 10px;
+  line-height: 24px;
+}
