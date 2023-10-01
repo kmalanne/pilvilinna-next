@@ -5,16 +5,16 @@ import { useEffect, useState } from 'react'
 import { createPortal } from 'react-dom'
 
 import styles from './lightbox.module.css'
-import type { IImageProps } from '../Image/Image'
+import type { ImageProps } from '../Image/Image'
 import { NextImage as Image } from '../Image/Image'
 
-export interface ILightboxProps {
+export type LightboxProps = {
   current: number
-  images: Array<IImageProps>
+  images: Array<ImageProps>
   onClose: () => void
 }
 
-export const Lightbox: React.FC<ILightboxProps> = (props: ILightboxProps) => {
+export const Lightbox: React.FC<LightboxProps> = (props: LightboxProps) => {
   const { current, images, onClose } = props
 
   const [currentImage, setCurrentImage] = useState(current)

@@ -1,0 +1,66 @@
+/* Container Styles */
+.Container {
+  padding: 90px;
+  margin-right: 0px;
+  margin-left: 0px;
+  max-width: 100%;
+}
+
+@media (max-width: 575px) {
+  .Container {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
+@media (min-width: 1100px) {
+  .Container {
+    padding-left: 200px;
+    padding-right: 200px;
+  }
+}
+
+/* GalleryContainer Styles */
+.GalleryContainer {
+  background-color: #ffffff;
+}
+
+/* Heading Styles */
+.Heading {
+  margin-bottom: 20px;
+}
+
+/* ItemHeader Styles */
+.ItemHeader {
+  margin-bottom: 20px;
+  border-bottom: dotted 1px;
+}
+
+/* Text Styles */
+.Text {
+  font-size: 18px;
+}
+
+/* ItemHeaderText Styles */
+.ItemHeaderText {
+  margin-bottom: 0px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* ItemHeaderPrice Styles */
+.ItemHeaderPrice {
+  float: right;
+  color: #5e5185;
+  font-size: 20px;
+}
+
+/* ListItem Styles */
+.ListItem {
+  font-size: 18px;
+}
+
+/* InfoTextContainer Styles */
+.InfoTextContainer {
+  margin-top: 40px;
+}

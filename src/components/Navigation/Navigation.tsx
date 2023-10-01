@@ -7,6 +7,8 @@ import { useEffect, useRef, useState } from 'react'
 import type React from 'react'
 import { Container as BSContainer, Nav as BSNav, Navbar as BSNavbar } from 'react-bootstrap'
 
+import { strings } from '@/utils/strings'
+
 import styles from './navigation.module.css'
 import { AppRoute } from '../../utils/route'
 
@@ -57,7 +59,7 @@ export const Navigation: React.FC = () => {
         >
           <BSNavbar.Brand className={styles.Brand}>
             <div className={styles.ImageWrapper}>
-              <Image layout="fill" src="/images/logo.jpg" alt="logo" />
+              <Image layout="fill" src="/images/logo.jpg" alt={strings.navigation.logo} />
             </div>
           </BSNavbar.Brand>
           <BSNavbar.Toggle className={styles.Toggle} aria-controls="responsive-navbar-nav" />
@@ -65,28 +67,30 @@ export const Navigation: React.FC = () => {
             <BSNav className={`${styles.NavLeft} mr-auto`}>
               <div className={`${styles.Link} ${activeLink(AppRoute.Home, pathname)}`}>
                 <Link href={AppRoute.Home} onClick={onToggle}>
-                  home
+                  {strings.navigation.home}
                 </Link>
               </div>
               <div className={`${styles.Link} ${activeLink(AppRoute.Assortment, pathname)}`}>
                 <Link href={AppRoute.Assortment} onClick={onToggle}>
-                  assortment
+                  {strings.navigation.assortment}
                 </Link>
               </div>
             </BSNav>
             <BSNav className={styles.NavRight}>
               <div className={`${styles.Link} ${activeLink(AppRoute.Ordering, pathname)}`}>
                 <Link href={AppRoute.Ordering} onClick={onToggle}>
-                  ordering
+                  {strings.navigation.ordering}
                 </Link>
               </div>
               <div className={`${styles.Link} ${activeLink(AppRoute.Contact, pathname)}`}>
                 <Link href={AppRoute.Contact} onClick={onToggle}>
-                  contact
+                  {strings.navigation.contact}
                 </Link>
               </div>
               <div className={styles.Link}>
-                <Link href="http://annaj-sukkiajasuklaata.blogspot.com/">blog</Link>
+                <Link href="http://annaj-sukkiajasuklaata.blogspot.com/">
+                  {strings.navigation.blog}
+                </Link>
               </div>
             </BSNav>
           </BSNavbar.Collapse>

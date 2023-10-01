@@ -3,12 +3,12 @@ import type React from 'react'
 
 import styles from './banner.module.css'
 
-export interface IBannerProps {
+export type BannerProps = {
   text: string
   imgSrc: string
 }
 
-export const Banner: React.FC<IBannerProps> = (props: IBannerProps) => {
+export const Banner: React.FC<BannerProps> = (props: BannerProps) => {
   const { imgSrc, text } = props
 
   return (

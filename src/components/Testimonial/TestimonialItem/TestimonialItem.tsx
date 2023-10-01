@@ -4,12 +4,12 @@ import type React from 'react'
 
 import styles from './testimonialItem.module.css'
 
-export interface ITestimonialItemProps {
+export type TestimonialItemProps = {
   author: string
   text: string
 }
 
-export const TestimonialItem: React.FC<ITestimonialItemProps> = (props: ITestimonialItemProps) => {
+export const TestimonialItem: React.FC<TestimonialItemProps> = (props: TestimonialItemProps) => {
   const { author, text } = props
 
   return (

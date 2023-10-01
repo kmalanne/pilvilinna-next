@@ -1,18 +1,13 @@
 import type { Metadata } from 'next'
 
+import { Contact as ContactSection } from '@/containers/Contact/Contact'
 import { strings } from '@/utils/strings'
-
-import { Banner } from '../../components/Banner/Banner'
 
 export const metadata: Metadata = {
   title: strings.contact.title,
   description: strings.contact.description,
 }
 
-const Contact = () => (
-  <section aria-label={strings.contact.title}>
-    <Banner imgSrc="/images/banner-2.jpg" text={strings.contact.contact}></Banner>
-  </section>
-)
+const Contact = () => <ContactSection />
 
 export default Contact

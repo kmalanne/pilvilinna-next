@@ -4,13 +4,13 @@ import type React from 'react'
 
 import styles from './serviceItem.module.css'
 
-export interface IServiceItemProps {
+export type ServiceItemProps = {
   title: string
   text: string
   icon: IconDefinition
 }
 
-export const ServiceItem: React.FC<IServiceItemProps> = (props: IServiceItemProps) => {
+export const ServiceItem: React.FC<ServiceItemProps> = (props: ServiceItemProps) => {
   const { icon, text, title } = props
 
   return (

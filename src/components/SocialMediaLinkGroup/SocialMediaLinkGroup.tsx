@@ -2,10 +2,12 @@ import { faFacebookSquare, faInstagram } from '@fortawesome/free-brands-svg-icon
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import type React from 'react'
 
+import { strings } from '@/utils/strings'
+
 import styles from './socialMediaLinkGroup.module.css'
 
 export const SocialMediaLinkGroup: React.FC = () => (
-  <div aria-label="social_navigation">
+  <div aria-label={strings.navigation.socialNavigation}>
     <a
       className={styles.Link}
       href="https://www.facebook.com/Pilvilinnan-leipomo-1541890192566923/"

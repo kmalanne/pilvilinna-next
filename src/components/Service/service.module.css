@@ -1,0 +1,6 @@
+/* CSS Grid Styles */
+.GridContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adjust as needed */
+  grid-gap: 20px; /* Adjust the gap between items */
+}

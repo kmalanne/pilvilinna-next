@@ -31,25 +31,21 @@
 
 /* Brand Styles */
 .Brand {
-  .navbar-brand {
-    position: absolute;
-    left: 50%;
-    top: 0px;
-    transform: translateX(-50%);
-    margin-right: 0px;
-    z-index: 30;
-  }
+  position: absolute;
+  left: 50%;
+  top: 0px;
+  transform: translateX(-50%);
+  margin-right: 0px;
+  z-index: 30;
 }
 
 @media (max-width: 1000px) {
   .Brand {
-    .navbar-brand {
-      position: relative;
-      left: 0%;
-      top: 0px;
-      transform: translateX(-0%);
-      padding-left: 15px;
-    }
+    position: relative;
+    left: 0%;
+    top: 0px;
+    transform: translateX(-0%);
+    padding-left: 15px;
   }
 }
 

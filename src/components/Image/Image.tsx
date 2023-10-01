@@ -4,7 +4,7 @@ import React from 'react'
 export type Layout = 'intrinsic' | 'fill' | 'responsive'
 export type Loading = 'eager' | 'lazy'
 
-export interface IImageProps {
+export type ImageProps = {
   id: number
   layout: Layout
   loading: Loading
@@ -13,7 +13,7 @@ export interface IImageProps {
   alt?: string
 }
 
-export const NextImage: React.FC<IImageProps> = (props: IImageProps) => {
+export const NextImage: React.FC<ImageProps> = (props: ImageProps) => {
   const { id, layout, loading, onClick, src, alt = 'image' } = props
 
   const onImageClick = (event: React.MouseEvent<HTMLElement> | React.TouchEvent<HTMLElement>) => {
