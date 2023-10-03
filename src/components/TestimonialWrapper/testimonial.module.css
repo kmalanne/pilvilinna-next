@@ -2,16 +2,16 @@
 .GridContainer {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-gap: 20px;
+  gap: 3rem;
   justify-items: center;
   align-items: center;
 }
 
-/* Media query for mobile devices */
 @media (max-width: 767px) {
   .GridContainer {
     grid-template-columns: 1fr; /* 1 column on mobile */
     grid-template-rows: repeat(4, 1fr); /* 4 rows on mobile */
+    gap: 1rem;
   }
 }
 

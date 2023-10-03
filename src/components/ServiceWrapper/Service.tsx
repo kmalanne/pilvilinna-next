@@ -1,7 +1,7 @@
 import type React from 'react'
 
 import styles from './service.module.css'
-import { ServiceItem, type ServiceItemProps } from './ServiceItem/ServiceItem'
+import { ServiceItem, type ServiceItemProps } from './ServiceItem'
 
 export type ServiceProps = {
   serviceItems: Array<ServiceItemProps>

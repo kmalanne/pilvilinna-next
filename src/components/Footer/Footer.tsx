@@ -4,7 +4,7 @@ import type React from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
 
 import styles from './footer.module.css'
-import { SocialMediaLinkGroup } from '../SocialMediaLinkGroup/SocialMediaLinkGroup'
+import { SocialMediaLinkWrapper } from '../SocialMediaLinkWrapper'
 
 const phoneNumber = process.env.NEXT_PUBLIC__PHONE_NUMBER
 const phoneNumberDisplay = process.env.NEXT_PUBLIC__PHONE_NUMBER_DISPLAY
@@ -38,7 +38,7 @@ export const Footer: React.FC = () => (
       </Row>
       <Row>
         <Col className={styles.SocialMediaCol}>
-          <SocialMediaLinkGroup />
+          <SocialMediaLinkWrapper />
         </Col>
       </Row>
     </Container>

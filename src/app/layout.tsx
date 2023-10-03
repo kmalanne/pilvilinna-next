@@ -2,10 +2,10 @@ import '@fortawesome/fontawesome-svg-core/styles.css'
 import { config } from '@fortawesome/fontawesome-svg-core'
 import { Josefin_Slab } from 'next/font/google'
 
-import { Footer } from '../components/Footer/Footer'
-import { Header } from '../components/Header/Header'
-import { Navigation } from '../components/Navigation/Navigation'
-import '../theme/globals.css'
+import { Footer } from '@/components/Footer'
+import { Header } from '@/components/Header'
+import { Navigation } from '@/components/Navigation'
+import '../style/globals.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 const josefinSlab = Josefin_Slab({ weight: '400', subsets: ['latin'] })

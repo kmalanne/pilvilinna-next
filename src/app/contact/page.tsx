@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 
-import { Contact as ContactSection } from '@/containers/Contact/Contact'
+import { Contact as ContactSection } from '@/containers/Contact'
 import { strings } from '@/utils/strings'
 
 export const metadata: Metadata = {

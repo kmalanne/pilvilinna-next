@@ -1,23 +1,27 @@
 /* Item Styles */
 .Item {
+  display: flex;
+  flex-direction: row;
   background-color: #ffffff;
   border-radius: 4px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  text-align: center;
+  padding: 2rem 2rem;
   color: #454545;
 }
 
 .Item svg {
-  font-size: 36px;
-  margin-bottom: 10px;
+  font-size: 45px;
   color: #454545;
+}
+
+/* TextWrapper Styles */
+.TextWrapper {
+  margin-left: 2rem;
 }
 
 /* Statement Styles */
 .Statement {
   font-size: 24px;
-  margin-bottom: 10px;
 }
 
 /* Author Styles */

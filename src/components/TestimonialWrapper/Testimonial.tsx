@@ -1,7 +1,7 @@
 import type React from 'react'
 
 import styles from './testimonial.module.css'
-import { TestimonialItem, type TestimonialItemProps } from './TestimonialItem/TestimonialItem'
+import { TestimonialItem, type TestimonialItemProps } from './TestimonialItem'
 
 export type TestimonialProps = {
   testimonials: Array<TestimonialItemProps>

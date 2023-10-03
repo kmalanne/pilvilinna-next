@@ -2,10 +2,10 @@
 
 import { Container as BSContainer } from 'react-bootstrap'
 
+import { Banner } from '@/components/Banner'
 import { strings } from '@/utils/strings'
 
 import styles from './ordering.module.css'
-import { Banner } from '../../components/Banner/Banner'
 
 const phoneNumber = process.env.NEXT_PUBLIC__PHONE_NUMBER
 const phoneNumberDisplay = process.env.NEXT_PUBLIC__PHONE_NUMBER_DISPLAY

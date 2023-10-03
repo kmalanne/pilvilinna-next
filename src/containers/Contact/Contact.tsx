@@ -1,6 +1,5 @@
+import { Banner } from '@/components/Banner'
 import { strings } from '@/utils/strings'
-
-import { Banner } from '../../components/Banner/Banner'
 
 export const Contact = () => (
   <section aria-label={strings.contact.title}>

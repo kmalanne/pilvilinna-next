@@ -5,12 +5,11 @@ import { useEffect, useState } from 'react'
 import { createPortal } from 'react-dom'
 
 import styles from './lightbox.module.css'
-import type { ImageProps } from '../Image/Image'
-import { NextImage as Image } from '../Image/Image'
+import { type GalleryImageProps, GalleryImage as Image } from '../Gallery/Image'
 
 export type LightboxProps = {
   current: number
-  images: Array<ImageProps>
+  images: Array<GalleryImageProps>
   onClose: () => void
 }
 

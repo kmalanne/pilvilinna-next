@@ -6,7 +6,7 @@ import type React from 'react'
 import { Container } from 'react-bootstrap'
 
 import styles from './header.module.css'
-import { SocialMediaLinkGroup } from '../SocialMediaLinkGroup/SocialMediaLinkGroup'
+import { SocialMediaLinkWrapper } from '../SocialMediaLinkWrapper'
 
 const phoneNumber = process.env.NEXT_PUBLIC__PHONE_NUMBER
 const phoneNumberDisplay = process.env.NEXT_PUBLIC__PHONE_NUMBER_DISPLAY
@@ -29,7 +29,7 @@ export const Header: React.FC = () => (
         </a>
       </div>
       <div className={styles.RightContainer}>
-        <SocialMediaLinkGroup />
+        <SocialMediaLinkWrapper />
       </div>
     </Container>
   </header>

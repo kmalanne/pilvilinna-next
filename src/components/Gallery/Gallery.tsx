@@ -1,12 +1,11 @@
 import React, { useState } from 'react'
 
 import styles from './gallery.module.css'
-import type { ImageProps } from '../Image/Image'
-import { NextImage as Image } from '../Image/Image'
-import { Lightbox } from '../Lightbox/Lightbox'
+import { type GalleryImageProps, GalleryImage as Image } from './Image'
+import { Lightbox } from '../Lightbox'
 
 export type GalleryProps = {
-  images: Array<ImageProps>
+  images: Array<GalleryImageProps>
 }
 
 export const Gallery: React.FC<GalleryProps> = (props: GalleryProps) => {
@@ -44,7 +43,7 @@ export const Gallery: React.FC<GalleryProps> = (props: GalleryProps) => {
   return (
     <React.Fragment>
       <div className={styles.Gallery} aria-label="image_gallery">
-        {images.map((image: ImageProps, index) => (
+        {images.map((image: GalleryImageProps, index) => (
           <span className={styles.ImageWrapper} key={index}>
             <Image
               id={index}

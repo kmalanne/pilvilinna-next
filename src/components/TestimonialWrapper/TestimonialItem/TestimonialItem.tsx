@@ -15,9 +15,9 @@ export const TestimonialItem: React.FC<TestimonialItemProps> = (props: Testimoni
   return (
     <div className={styles.Item} aria-label="testimonial_item">
       <FontAwesomeIcon icon={faUserCircle} size="4x" inverse></FontAwesomeIcon>
-      <div className={styles.Statement}>
-        <p dangerouslySetInnerHTML={{ __html: text }}></p>
-        <div className={styles.Author}>{author}</div>
+      <div className={styles.TextWrapper}>
+        <p className={styles.Statement} dangerouslySetInnerHTML={{ __html: text }}></p>
+        <p className={styles.Author}>{author}</p>
       </div>
     </div>
   )

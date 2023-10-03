@@ -4,7 +4,7 @@ import React from 'react'
 export type Layout = 'intrinsic' | 'fill' | 'responsive'
 export type Loading = 'eager' | 'lazy'
 
-export type ImageProps = {
+export type GalleryImageProps = {
   id: number
   layout: Layout
   loading: Loading
@@ -13,7 +13,7 @@ export type ImageProps = {
   alt?: string
 }
 
-export const NextImage: React.FC<ImageProps> = (props: ImageProps) => {
+export const GalleryImage: React.FC<GalleryImageProps> = (props: GalleryImageProps) => {
   const { id, layout, loading, onClick, src, alt = 'image' } = props
 
   const onImageClick = (event: React.MouseEvent<HTMLElement> | React.TouchEvent<HTMLElement>) => {

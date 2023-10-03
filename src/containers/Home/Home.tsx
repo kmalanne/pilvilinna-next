@@ -5,12 +5,12 @@ import Image from 'next/legacy/image'
 import Link from 'next/link'
 import { Col, Container, Row } from 'react-bootstrap'
 
+import { Service } from '@/components/ServiceWrapper'
+import { Testimonial } from '@/components/TestimonialWrapper'
 import { AppRoute } from '@/utils/route'
 import { strings } from '@/utils/strings'
 
 import styles from './home.module.css'
-import { Service } from '../../components/Service/Service'
-import { Testimonial } from '../../components/Testimonial/Testimonial'
 
 const testimonials = [
   { text: 'testimonial_1', author: 'Essi, Tampere' },

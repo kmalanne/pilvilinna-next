@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 
-import { Home as HomeSection } from '@/containers/Home/Home'
+import { Home as HomeSection } from '@/containers/Home'
 import { strings } from '@/utils/strings'
 
 export const metadata: Metadata = {

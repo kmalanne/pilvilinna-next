@@ -2,14 +2,14 @@
 
 import { Container as BSContainer } from 'react-bootstrap'
 
+import { Banner } from '@/components/Banner'
+import { Gallery } from '@/components/Gallery'
+import type { GalleryImageProps } from '@/components/Gallery/Image'
 import { strings } from '@/utils/strings'
 
 import styles from './assortment.module.css'
-import { Banner } from '../../components/Banner/Banner'
-import { Gallery } from '../../components/Gallery/Gallery'
-import type { ImageProps } from '../../components/Image/Image'
 
-const getImages = (): Array<ImageProps> => {
+const getImages = (): Array<GalleryImageProps> => {
   const images = []
   for (let i = 1; i < 17; i++) {
     images.push({
@@ -17,7 +17,7 @@ const getImages = (): Array<ImageProps> => {
       src: `/images/gallery-${i}.jpg`,
       layout: 'responsive',
       loading: 'lazy',
-    } as ImageProps)
+    } as GalleryImageProps)
   }
 
   return images

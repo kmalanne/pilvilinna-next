@@ -4,9 +4,9 @@ import type React from 'react'
 
 import { strings } from '@/utils/strings'
 
-import styles from './socialMediaLinkGroup.module.css'
+import styles from './socialMediaLinkWrapper.module.css'
 
-export const SocialMediaLinkGroup: React.FC = () => (
+export const SocialMediaLinkWrapper: React.FC = () => (
   <div aria-label={strings.navigation.socialNavigation}>
     <a
       className={styles.Link}
