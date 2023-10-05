@@ -1,1 +1,1 @@
-export { Service } from './Service'
+export { ServiceWrapper } from './ServiceWrapper'

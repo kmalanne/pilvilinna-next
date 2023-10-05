@@ -1,43 +1,23 @@
 'use client'
 
-import { faBirthdayCake, faBreadSlice, faCookie } from '@fortawesome/free-solid-svg-icons'
 import Image from 'next/legacy/image'
 import Link from 'next/link'
 import { Col, Container, Row } from 'react-bootstrap'
 
-import { Service } from '@/components/ServiceWrapper'
-import { Testimonial } from '@/components/TestimonialWrapper'
+import { RichText } from '@/components/RichText'
+import { ServiceWrapper } from '@/components/ServiceWrapper'
+import { TestimonialWrapper } from '@/components/TestimonialWrapper'
+import type { HomeData } from '@/contentful/types'
 import { AppRoute } from '@/utils/route'
 import { strings } from '@/utils/strings'
 
 import styles from './home.module.css'
 
-const testimonials = [
-  { text: 'testimonial_1', author: 'Essi, Tampere' },
-  { text: 'testimonial_2', author: 'Mari, Ylöjärvi' },
-  { text: 'testimonial_3', author: 'Sanna, Pirkkala' },
-  { text: 'testimonial_4', author: 'Jonna, Nokia' },
-]
+export type HomeProps = {
+  data?: HomeData
+}
 
-const serviceItems = [
-  {
-    icon: faBirthdayCake,
-    title: 'assortment_choice_1_title',
-    text: 'assortment_choice_1_description',
-  },
-  {
-    icon: faBreadSlice,
-    title: 'assortment_choice_2_title',
-    text: 'assortment_choice_2_description',
-  },
-  {
-    icon: faCookie,
-    title: 'assortment_choice_3_title',
-    text: 'assortment_choice_3_description',
-  },
-]
-
-export const Home = () => (
+export const Home = ({ data }: HomeProps) => (
   <section aria-labelledby="title">
     <div className={styles.HeroContainer}>
       <Image
@@ -67,23 +47,22 @@ export const Home = () => (
             layout="responsive"
             loading="lazy"
             objectFit="contain"
-            alt="Pilvilinnan leipomo leipuri ja omistaja"
+            alt={strings.home.bakerImage}
           />
         </Col>
         <Col className={styles.BakerTextWrapper} lg={6} md={12}>
-          <p>info_1</p>
-          <p>info_2</p>
+          <RichText document={data?.about.json} />
           <p className={styles.Signature}>{strings.home.signature}</p>
         </Col>
       </Row>
     </Container>
     <Container className={styles.ServiceContainer}>
       <h2 className={styles.SubHeading}>{strings.home.headingServices}</h2>
-      <Service serviceItems={serviceItems} />
+      <ServiceWrapper services={data?.serviceItemsCollection.items} />
     </Container>
     <Container className={styles.TestimonialContainer}>
       <h2 className={styles.SubHeading}>{strings.home.headingTestimonials}</h2>
-      <Testimonial testimonials={testimonials} />
+      <TestimonialWrapper testimonials={data?.testimonialsCollection.items} />
     </Container>
   </section>
 )

@@ -1,1 +1,1 @@
-export { Testimonial } from './Testimonial'
+export { TestimonialWrapper } from './TestimonialWrapper'

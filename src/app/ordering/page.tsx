@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 
 import { Ordering as OrderingSection } from '@/containers/Ordering'
+import { fetchOrderingCollection } from '@/contentful/api'
 import { strings } from '@/utils/strings'
 
 export const metadata: Metadata = {
@@ -8,6 +9,10 @@ export const metadata: Metadata = {
   description: strings.ordering.description,
 }
 
-const Ordering = () => <OrderingSection />
+const Ordering = async () => {
+  const data = await fetchOrderingCollection()
+
+  return <OrderingSection data={data} />
+}
 
 export default Ordering

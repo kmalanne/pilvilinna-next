@@ -2,11 +2,14 @@
 .Item {
   display: flex;
   flex-direction: row;
+  align-items: center;
   background-color: #ffffff;
   border-radius: 4px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   padding: 2rem 2rem;
   color: #454545;
+  height: 100%;
+  width: 100%;
 }
 
 .Item svg {
@@ -19,8 +22,8 @@
   margin-left: 2rem;
 }
 
-/* Statement Styles */
-.Statement {
+/* Testimonial Styles */
+.Testimonial {
   font-size: 24px;
 }
 

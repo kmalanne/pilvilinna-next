@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 
 import { Home as HomeSection } from '@/containers/Home'
+import { fetchHomeCollection } from '@/contentful/api'
 import { strings } from '@/utils/strings'
 
 export const metadata: Metadata = {
@@ -8,6 +9,10 @@ export const metadata: Metadata = {
   description: strings.home.description,
 }
 
-const Home = () => <HomeSection />
+const Home = async () => {
+  const data = await fetchHomeCollection()
+
+  return <HomeSection data={data} />
+}
 
 export default Home

@@ -3,18 +3,22 @@
 import { Container as BSContainer } from 'react-bootstrap'
 
 import { Banner } from '@/components/Banner'
+import { RichText } from '@/components/RichText'
+import type { OrderingData } from '@/contentful/types'
 import { strings } from '@/utils/strings'
 
 import styles from './ordering.module.css'
 
-const phoneNumber = process.env.NEXT_PUBLIC__PHONE_NUMBER
-const phoneNumberDisplay = process.env.NEXT_PUBLIC__PHONE_NUMBER_DISPLAY
+export type OrderingProps = {
+  data?: OrderingData
+}
 
-export const Ordering = () => (
+export const Ordering = ({ data }: OrderingProps) => (
   <section aria-labelledby="ordering-title">
     <Banner imgSrc="/images/banner-3.jpg" text={strings.ordering.title}></Banner>
     <BSContainer className={styles.Container}>
-      <h2 className={styles.Heading} id="ordering-title">
+      <RichText document={data?.termsOfOrderingAndDelivery?.json} />
+      {/* <h2 className={styles.Heading} id="ordering-title">
         title_2:
       </h2>
       <p className={styles.Text}>
@@ -47,7 +51,7 @@ export const Ordering = () => (
         <strong>info_11</strong>
       </p>
       <p className={styles.Text}>info_12</p>
-      <p className={styles.Text}>info_13</p>
+      <p className={styles.Text}>info_13</p> */}
     </BSContainer>
   </section>
 )

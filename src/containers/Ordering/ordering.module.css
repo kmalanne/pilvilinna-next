@@ -22,11 +22,11 @@
 }
 
 /* Heading Styles */
-.Heading {
+.Container h2 {
   margin-bottom: 20px;
 }
 
 /* Text Styles */
-.Text {
+.Container p {
   font-size: 18px;
 }
