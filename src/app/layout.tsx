@@ -34,7 +34,7 @@ export const metadata = {
   openGraph: {
     title: 'Pilvilinnan leipomo',
     description: 'Pilvilinnan leipomo, kotileipomo Nokia, Finland',
-    url: 'https://pilvilinnanleipomi.fi',
+    url: 'https://pilvilinnanleipomo.fi',
     siteName: 'Pilvilinnan leipomo',
     locale: 'fi_FI',
     type: 'website',

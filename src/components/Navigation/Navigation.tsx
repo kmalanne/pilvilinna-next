@@ -1,6 +1,6 @@
 'use client'
 
-import Image from 'next/legacy/image'
+import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useEffect, useRef, useState } from 'react'
@@ -12,7 +12,7 @@ import { strings } from '@/utils/strings'
 import styles from './navigation.module.css'
 import { AppRoute } from '../../utils/route'
 
-const activeLink = (url: string, pathname: string) => (pathname === url ? 'active' : '')
+const activeLink = (url: string, pathname: string) => (pathname === url ? 'link-active' : '')
 
 export const Navigation: React.FC = () => {
   const pathname = usePathname()
@@ -59,39 +59,45 @@ export const Navigation: React.FC = () => {
         >
           <BSNavbar.Brand className={styles.Brand}>
             <div className={styles.ImageWrapper}>
-              <Image layout="fill" src="/images/logo.jpg" alt={strings.navigation.logo} />
+              <Image fill={true} src="/images/logo.jpg" alt={strings.navigation.logo} />
             </div>
           </BSNavbar.Brand>
           <BSNavbar.Toggle className={styles.Toggle} aria-controls="responsive-navbar-nav" />
           <BSNavbar.Collapse className={styles.Collapse} id="responsive-navbar-nav">
             <BSNav className={`${styles.NavLeft} mr-auto`}>
-              <div className={`${styles.Link} ${activeLink(AppRoute.Home, pathname)}`}>
-                <Link href={AppRoute.Home} onClick={onToggle}>
-                  {strings.navigation.home}
-                </Link>
-              </div>
-              <div className={`${styles.Link} ${activeLink(AppRoute.Assortment, pathname)}`}>
-                <Link href={AppRoute.Assortment} onClick={onToggle}>
-                  {strings.navigation.assortment}
-                </Link>
-              </div>
+              <Link
+                className={`${styles.Link} ${activeLink(AppRoute.Home, pathname)}`}
+                href={AppRoute.Home}
+                onClick={onToggle}
+              >
+                {strings.navigation.home}
+              </Link>
+              <Link
+                className={`${styles.Link} ${activeLink(AppRoute.Assortment, pathname)}`}
+                href={AppRoute.Assortment}
+                onClick={onToggle}
+              >
+                {strings.navigation.assortment}
+              </Link>
             </BSNav>
             <BSNav className={styles.NavRight}>
-              <div className={`${styles.Link} ${activeLink(AppRoute.Ordering, pathname)}`}>
-                <Link href={AppRoute.Ordering} onClick={onToggle}>
-                  {strings.navigation.ordering}
-                </Link>
-              </div>
-              <div className={`${styles.Link} ${activeLink(AppRoute.Contact, pathname)}`}>
-                <Link href={AppRoute.Contact} onClick={onToggle}>
-                  {strings.navigation.contact}
-                </Link>
-              </div>
-              <div className={styles.Link}>
-                <Link href="http://annaj-sukkiajasuklaata.blogspot.com/">
-                  {strings.navigation.blog}
-                </Link>
-              </div>
+              <Link
+                className={`${styles.Link} ${activeLink(AppRoute.Ordering, pathname)}`}
+                href={AppRoute.Ordering}
+                onClick={onToggle}
+              >
+                {strings.navigation.ordering}
+              </Link>
+              <Link
+                className={`${styles.Link} ${activeLink(AppRoute.Contact, pathname)}`}
+                href={AppRoute.Contact}
+                onClick={onToggle}
+              >
+                {strings.navigation.contact}
+              </Link>
+              <Link className={styles.Link} href="http://annaj-sukkiajasuklaata.blogspot.com/">
+                {strings.navigation.blog}
+              </Link>
             </BSNav>
           </BSNavbar.Collapse>
         </BSNavbar>

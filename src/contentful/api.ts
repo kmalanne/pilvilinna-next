@@ -100,7 +100,7 @@ export const fetchHomeCollection = async (): Promise<HomeData | undefined> => {
 export const fetchAssortmentCollection = async (): Promise<AssortmentData | undefined> => {
   const data = await doQuery<AssortmentCollectionQueryResponse>(assortmentQuery)
 
-  return data?.assortmentCollection.items[0]
+  return data?.data.assortmentCollection.items[0]
 }
 
 export const fetchOrderingCollection = async (): Promise<OrderingData | undefined> => {

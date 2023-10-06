@@ -60,7 +60,8 @@
   font-size: 18px;
 }
 
-/* InfoTextContainer Styles */
-.InfoTextContainer {
+/* InfoText Styles */
+.InfoText {
+  font-size: 16px;
   margin-top: 40px;
 }

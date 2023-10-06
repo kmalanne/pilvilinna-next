@@ -26,11 +26,13 @@ export type HomeData = {
 export type Product = {
   title: string
   price: string
-  description: Document
+  description: {
+    json: Document
+  }
 }
 
 export type AssortmentData = {
-  infoText: Document
+  infoText: { json: Document }
   productsCollection: {
     items: Product[]
   }
@@ -49,8 +51,10 @@ export type HomeCollectionQueryResponse = {
 }
 
 export type AssortmentCollectionQueryResponse = {
-  assortmentCollection: {
-    items: AssortmentData[]
+  data: {
+    assortmentCollection: {
+      items: AssortmentData[]
+    }
   }
 }
 

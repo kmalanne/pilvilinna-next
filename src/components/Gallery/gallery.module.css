@@ -12,13 +12,13 @@
   grid-area: span 1 / span 1;
 }
 
-.ImageWrapper > span {
+.ImageWrapper > img {
   border-radius: 2px;
   cursor: pointer;
   filter: grayscale(0%);
   transition: all 0.5s ease;
 }
 
-.ImageWrapper > span:hover {
+.ImageWrapper > img:hover {
   filter: grayscale(80%);
 }

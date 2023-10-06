@@ -11,14 +11,21 @@
   box-shadow: 0 2px 2px -2px grey;
 }
 
-/* Container Styles */
 .Container {
-  @media (max-width: 1000px) {
-    padding-left: 0px;
-    padding-right: 0px;
-  }
+  margin-left: 0px;
+  margin-right: 0px;
+}
 
-  @media (min-width: 576px) {
+/* Container Styles */
+@media (min-width: 1000px) {
+  .Container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+@media (min-width: 576px) {
+  .Container {
     max-width: 100%;
   }
 }
@@ -56,7 +63,7 @@
   height: 160px;
 }
 
-.ImageWrapper > span {
+.ImageWrapper > img {
   border-radius: 50%;
   box-shadow: 0 5px 2px -2px grey;
 }
@@ -67,7 +74,7 @@
     height: 60px;
   }
 
-  .ImageWrapper > span {
+  .ImageWrapper > img {
     border-radius: 50%;
   }
 }
@@ -101,11 +108,11 @@
 }
 
 /* NavLeft Styles */
-.NavLeft > div {
+.NavLeft > .Link {
   margin-right: 30px;
 }
 
-.NavLeft > div:last-child {
+.NavLeft > .Link:last-child {
   margin-right: 0px;
 }
 
@@ -114,11 +121,11 @@
     padding-left: 15px;
   }
 
-  .NavLeft > div {
+  .NavLeft > .Link {
     margin-right: 15px;
   }
 
-  .NavLeft > div:last-child {
+  .NavLeft > .Link:last-child {
     margin-right: 15px;
   }
 }
@@ -128,25 +135,25 @@
   margin-left: auto;
 }
 
-.NavRight > div {
+.NavRight > .Link {
   margin-left: 30px;
 }
 
-.NavRight > div:first-child {
+.NavRight > .Link:first-child {
   margin-left: 0px;
 }
 
 @media (max-width: 1000px) {
-  .NavRight > div {
+  .NavRight > .Link {
     margin-left: 15px;
     margin-right: 15px;
   }
 
-  .NavRight > div:first-child {
+  .NavRight > .Link:first-child {
     margin-left: 15px;
   }
 
-  .NavRight > div:last-child {
+  .NavRight > .Link:last-child {
     border-bottom: none;
   }
 }
@@ -156,7 +163,7 @@
   position: relative;
 }
 
-.Link > a {
+.Link {
   font-size: 18px;
   font-weight: 600;
   text-decoration: none;
@@ -164,11 +171,11 @@
   transition: all 400ms linear 0s;
 }
 
-.Link.active > a {
+.Link.link-active {
   color: #5e5185;
 }
 
-.Link > a:after {
+.Link:after {
   content: '';
   display: block;
   width: 0px;
@@ -177,16 +184,16 @@
   transition: all 400ms linear 0s;
 }
 
-.Link > a:hover {
+.Link:hover {
   color: #5e5185;
 }
 
-.Link.active > a:after {
+.Link.link-active:after {
   width: 24px;
 }
 
 @media (max-width: 1000px) {
-  .Link > a {
+  .Link {
     line-height: 44px;
   }
 }
