@@ -3,8 +3,8 @@
   display: grid;
   grid-auto-flow: dense;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-gap: 5px;
-  padding: 10px;
+  grid-gap: 1rem;
+  padding: 0.5rem;
 }
 
 /* ImageWrapper Styles */
@@ -13,7 +13,7 @@
 }
 
 .ImageWrapper > img {
-  border-radius: 2px;
+  border-radius: 4px;
   cursor: pointer;
   filter: grayscale(0%);
   transition: all 0.5s ease;

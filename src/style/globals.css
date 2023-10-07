@@ -3,15 +3,11 @@ body {
   font-family: 'Josefin Slab', serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #f0f3f8;
+  background-color: #f2e6e7;
 }
 
 #root {
   height: 100vh;
-}
-
-nav.sticky + main {
-  padding-top: 85px;
 }
 
 .sr-only {
@@ -21,4 +17,21 @@ nav.sticky + main {
   width: 1px;
   height: 1px;
   overflow: hidden;
+}
+
+/* Navigation */
+nav.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  box-shadow: 0 2px 2px -2px grey;
+}
+
+nav.sticky + main {
+  padding-top: 85px;
+}
+
+a.link-active {
+  color: #32260d;
+  border-bottom: 1px solid #32260d;
 }

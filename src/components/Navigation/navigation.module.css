@@ -4,13 +4,6 @@
   z-index: 10;
 }
 
-.Nav.sticky {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  box-shadow: 0 2px 2px -2px grey;
-}
-
 .Container {
   margin-left: 0px;
   margin-right: 0px;
@@ -168,28 +161,10 @@
   font-weight: 600;
   text-decoration: none;
   color: #454545;
-  transition: all 400ms linear 0s;
-}
-
-.Link.link-active {
-  color: #5e5185;
-}
-
-.Link:after {
-  content: '';
-  display: block;
-  width: 0px;
-  height: 2px;
-  background: #5e5185;
-  transition: all 400ms linear 0s;
 }
 
 .Link:hover {
-  color: #5e5185;
-}
-
-.Link.link-active:after {
-  width: 24px;
+  color: #32260d;
 }
 
 @media (max-width: 1000px) {

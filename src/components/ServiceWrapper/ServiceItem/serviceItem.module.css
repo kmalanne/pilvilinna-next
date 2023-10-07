@@ -1,11 +1,14 @@
 /* Item Styles */
-@media (max-width: 575px) {
-  .Item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
+.Item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Title Styles */
+.Image {
+  border-radius: 50%;
 }
 
 /* Title Styles */

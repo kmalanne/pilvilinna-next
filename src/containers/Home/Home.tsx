@@ -1,6 +1,6 @@
 'use client'
 
-import Image from 'next/legacy/image'
+import Image from 'next/image'
 import Link from 'next/link'
 import { Col, Container, Row } from 'react-bootstrap'
 
@@ -23,36 +23,38 @@ export const Home = ({ data }: HomeProps) => (
       <Image
         src="/images/hero.jpg"
         alt="hero"
-        layout="fill"
-        objectFit="cover"
-        objectPosition="center"
+        fill
+        style={{
+          objectFit: 'cover',
+          objectPosition: 'center',
+        }}
         priority={true}
       ></Image>
       <h1 className={styles.Heading} id="title">
         {strings.home.title}
       </h1>
       <p className={styles.HeroText}>{strings.home.slogan}</p>
-      <div className={styles.LinkButton}>
-        <Link href={AppRoute.Contact}>{strings.contact.contact}</Link>
-      </div>
+      <Link className={styles.LinkButton} href={AppRoute.Contact}>
+        {strings.contact.contact}
+      </Link>
     </div>
     <Container className={styles.BakerContainer}>
       <h2 className="sr-only">{strings.home.headingAbout}</h2>
       <Row>
-        <Col className={styles.ImageWrapper} lg={6} md={12}>
-          <Image
-            src="/images/anna.jpg"
-            width={483}
-            height={746}
-            layout="responsive"
-            loading="lazy"
-            objectFit="contain"
-            alt={strings.home.bakerImage}
-          />
-        </Col>
-        <Col className={styles.BakerTextWrapper} lg={6} md={12}>
+        <Col className={styles.BakerTextWrapper} lg={10} md={12}>
           <RichText document={data?.about.json} />
           <p className={styles.Signature}>{strings.home.signature}</p>
+          <div className={styles.ImageWrapper}>
+            <Image
+              src="/images/anna.jpg"
+              width={0}
+              height={0}
+              sizes="100vw"
+              style={{ width: '40%', height: '40%' }}
+              loading="lazy"
+              alt={strings.home.bakerImage}
+            />
+          </div>
         </Col>
       </Row>
     </Container>

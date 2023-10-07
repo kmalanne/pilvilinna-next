@@ -11,6 +11,11 @@ export const strings = {
     phone: 'Puhelin',
     company: 'Yritys',
   },
+  footer: {
+    company: 'Yritys',
+    email: 'Sähköposti',
+    phone: 'Puhelin',
+  },
   home: {
     title: 'Pilvilinnan leipomo',
     description: 'Pilvilinnan leipomo, kotileipomo Nokialla',

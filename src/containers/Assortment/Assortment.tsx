@@ -30,7 +30,7 @@ const getImages = (): Array<GalleryImageProps> => {
 }
 
 export const Assortment = ({ data }: AssortmentProps) => (
-  <section aria-labelledby="assortment-title">
+  <section className={styles.Assortment} aria-labelledby="assortment-title">
     <Banner imgSrc="/images/banner-1.jpg" text={strings.assortment.title}></Banner>
     <BSContainer className={styles.Container}>
       <h2 className={styles.Heading} id="assortment-title">
