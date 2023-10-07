@@ -19,8 +19,6 @@ export const strings = {
   home: {
     title: 'Pilvilinnan leipomo',
     description: 'Pilvilinnan leipomo, kotileipomo Nokialla',
-    slogan: 'Unelmia ja haaveita, jotka maistuvat makealta.',
-    bakerImage: 'Pilvilinnan leipomo leipuri ja omistaja',
     signature: 'Pilvilinnan Anna',
     headingAbout: 'Leipomosta',
     headingServices: 'Valikoimani',

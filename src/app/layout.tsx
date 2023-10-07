@@ -5,6 +5,7 @@ import { Josefin_Slab } from 'next/font/google'
 import { Footer } from '@/components/Footer'
 import { Header } from '@/components/Header'
 import { Navigation } from '@/components/Navigation'
+import { fetchContactCollection } from '@/lib/api'
 import '../style/globals.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
@@ -41,14 +42,16 @@ export const metadata = {
   },
 }
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default async function RootLayout({ children }: { children: React.ReactNode }) {
+  const data = await fetchContactCollection()
+
   return (
     <html lang="fi">
       <body className={josefinSlab.className}>
-        <Header />
+        <Header data={data} />
         <Navigation />
         <main>{children}</main>
-        <Footer />
+        <Footer data={data} />
       </body>
     </html>
   )

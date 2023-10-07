@@ -4,9 +4,8 @@ import { Container as BSContainer } from 'react-bootstrap'
 
 import { Banner } from '@/components/Banner'
 import { Gallery } from '@/components/Gallery'
-import type { GalleryImageProps } from '@/components/Gallery/Image'
 import { RichText } from '@/components/RichText'
-import type { AssortmentData } from '@/contentful/types'
+import type { AssortmentData } from '@/lib/types'
 import { strings } from '@/utils/strings'
 
 import styles from './assortment.module.css'
@@ -15,23 +14,13 @@ export type AssortmentProps = {
   data?: AssortmentData
 }
 
-const getImages = (): Array<GalleryImageProps> => {
-  const images = []
-  for (let i = 1; i < 17; i++) {
-    images.push({
-      id: i,
-      src: `/images/gallery-${i}.jpg`,
-      layout: 'responsive',
-      loading: 'lazy',
-    } as GalleryImageProps)
-  }
-
-  return images
-}
-
-export const Assortment = ({ data }: AssortmentProps) => (
+export const Assortment: React.FC<AssortmentProps> = ({ data }: AssortmentProps) => (
   <section className={styles.Assortment} aria-labelledby="assortment-title">
-    <Banner imgSrc="/images/banner-1.jpg" text={strings.assortment.title}></Banner>
+    <Banner
+      text={strings.assortment.title}
+      url={data?.bannerImage.url}
+      description={data?.bannerImage.description}
+    ></Banner>
     <BSContainer className={styles.Container}>
       <h2 className={styles.Heading} id="assortment-title">
         {strings.assortment.title}
@@ -54,7 +43,7 @@ export const Assortment = ({ data }: AssortmentProps) => (
     </BSContainer>
     <BSContainer className={`${styles.Container} ${styles.GalleryContainer}`}>
       <h2 className="sr-only">Cake gallery</h2>
-      <Gallery images={getImages()}></Gallery>
+      <Gallery images={data?.galleryImagesCollection.items}></Gallery>
     </BSContainer>
   </section>
 )

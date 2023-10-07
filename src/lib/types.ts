@@ -1,8 +1,14 @@
 import type { Document } from '@contentful/rich-text-types'
 
+export type Asset = {
+  url: string
+  description: string
+}
+
 export type ServiceItem = {
   title: string
   text: string
+  image: Asset
 }
 
 export type TestimonialItem = {
@@ -11,10 +17,12 @@ export type TestimonialItem = {
 }
 
 export type HomeData = {
-  name: string
+  slogan: string
   about: {
     json: Document
   }
+  heroImage: Asset
+  bakerImage: Asset
   serviceItemsCollection: {
     items: ServiceItem[]
   }
@@ -32,14 +40,26 @@ export type Product = {
 }
 
 export type AssortmentData = {
+  bannerImage: Asset
   infoText: { json: Document }
   productsCollection: {
     items: Product[]
   }
+  galleryImagesCollection: {
+    items: Asset[]
+  }
 }
 
 export type OrderingData = {
+  bannerImage: Asset
   termsOfOrderingAndDelivery: { json: Document }
+}
+
+export type ContactData = {
+  bannerImage: Asset
+  email: string
+  phoneNumber: string
+  companyInfo: string
 }
 
 export type HomeCollectionQueryResponse = {
@@ -62,6 +82,14 @@ export type OrderingCollectionQueryResponse = {
   data: {
     orderingCollection: {
       items: OrderingData[]
+    }
+  }
+}
+
+export type ContactCollectionQueryResponse = {
+  data: {
+    contactCollection: {
+      items: ContactData[]
     }
   }
 }

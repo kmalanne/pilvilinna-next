@@ -8,6 +8,11 @@
 
 /* Title Styles */
 .Image {
+  width: 150px;
+  height: 150px;
+}
+
+.Image > img {
   border-radius: 50%;
 }
 
@@ -20,9 +25,9 @@
 
 /* Text Styles */
 .Text {
+  text-align: center;
   font-size: 18px;
   line-height: 26px;
-  padding-right: 40px;
 }
 
 @media (max-width: 575px) {

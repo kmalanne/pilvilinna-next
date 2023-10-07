@@ -1,6 +1,6 @@
 import type React from 'react'
 
-import type { ServiceItem as TServiceItem } from '@/contentful/types'
+import type { ServiceItem as TServiceItem } from '@/lib/types'
 
 import styles from './service.module.css'
 import { ServiceItem } from './ServiceItem'
@@ -9,7 +9,9 @@ export type ServiceWrapperProps = {
   services?: Array<TServiceItem>
 }
 
-export const ServiceWrapper: React.FC<ServiceWrapperProps> = ({ services }: ServiceWrapperProps) => {
+export const ServiceWrapper: React.FC<ServiceWrapperProps> = ({
+  services,
+}: ServiceWrapperProps) => {
   if (!services) {
     return null
   }

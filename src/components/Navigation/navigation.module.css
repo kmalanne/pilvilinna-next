@@ -7,6 +7,8 @@
 .Container {
   margin-left: 0px;
   margin-right: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
 }
 
 /* Container Styles */
@@ -154,17 +156,16 @@
 /* Link Styles */
 .Link {
   position: relative;
-}
-
-.Link {
   font-size: 18px;
   font-weight: 600;
   text-decoration: none;
   color: #454545;
+  border: 1px solid transparent;
 }
 
 .Link:hover {
   color: #32260d;
+  border-bottom: 1px solid #32260d;
 }
 
 @media (max-width: 1000px) {

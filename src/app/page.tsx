@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 
 import { Home as HomeSection } from '@/containers/Home'
-import { fetchHomeCollection } from '@/contentful/api'
+import { fetchHomeCollection } from '@/lib/api'
 import { strings } from '@/utils/strings'
 
 export const metadata: Metadata = {

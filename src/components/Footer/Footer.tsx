@@ -3,36 +3,35 @@
 import type React from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
 
+import type { ContactData } from '@/lib/types'
 import { strings } from '@/utils/strings'
 
 import styles from './footer.module.css'
 import { SocialMediaLinkWrapper } from '../SocialMediaLinkWrapper'
 
-const phoneNumber = process.env.NEXT_PUBLIC__PHONE_NUMBER
-const phoneNumberDisplay = process.env.NEXT_PUBLIC__PHONE_NUMBER_DISPLAY
+export type FooterProps = {
+  data?: ContactData
+}
 
-export const Footer: React.FC = () => (
+export const Footer: React.FC<FooterProps> = ({ data }: FooterProps) => (
   <footer>
     <Container className={styles.Container}>
       <Row>
         <Col className={styles.Col} sm>
           <div className={styles.Heading}>{strings.footer.email}:</div>
-          <a
-            className={styles.Link}
-            href="mailto:&#105;&#110;&#102;&#111;&#064;&#112;&#105;&#108;&#118;&#105;&#108;&#105;&#110;&#110;&#097;&#110;&#108;&#101;&#105;&#112;&#111;&#109;&#111;&#046;&#102;&#105;"
-          >
-            &#105;&#110;&#102;&#111;&#064;&#112;&#105;&#108;&#118;&#105;&#108;&#105;&#110;&#110;&#097;&#110;&#108;&#101;&#105;&#112;&#111;&#109;&#111;&#046;&#102;&#105;
+          <a className={styles.Link} href={`mailto:${data?.email}`}>
+            {data?.email}
           </a>
         </Col>
         <Col className={styles.Col} sm>
-          <div className={styles.Heading}>{strings.footer.email}:</div>
-          <a className={styles.Link} href={`tel:${phoneNumber}`}>
-            {phoneNumberDisplay}
+          <div className={styles.Heading}>{strings.footer.phone}:</div>
+          <a className={styles.Link} href={`tel:${data?.phoneNumber}`}>
+            {data?.phoneNumber}
           </a>
         </Col>
         <Col className={styles.Col} sm>
           <div className={styles.Heading}>{strings.footer.company}:</div>
-          <p className={styles.Text}>Pilvilinnan leipomo (2507048-6), Nokia</p>
+          <p className={styles.Text}>{data?.companyInfo}</p>
           <a className={styles.Link} href="https://www.oivahymy.fi/" target="_blank">
             oivahymy.fi
           </a>

@@ -1,18 +1,22 @@
 import React, { useState } from 'react'
 
+import type { Asset } from '@/lib/types'
+
 import styles from './gallery.module.css'
-import { type GalleryImageProps, GalleryImage as Image } from './Image'
+import { GalleryImage as Image } from './GalleryImage'
 import { Lightbox } from '../Lightbox'
 
 export type GalleryProps = {
-  images: Array<GalleryImageProps>
+  images?: Array<Asset>
 }
 
-export const Gallery: React.FC<GalleryProps> = (props: GalleryProps) => {
-  const { images } = props
-
+export const Gallery: React.FC<GalleryProps> = ({ images }: GalleryProps) => {
   const [currentImage, setCurrentImage] = useState(-1)
   const [isModalOpen, setIsModalOpen] = useState(false)
+
+  if (!images) {
+    return null
+  }
 
   const openLightbox = (imageId: number) => {
     if (document.documentElement) {
@@ -43,15 +47,15 @@ export const Gallery: React.FC<GalleryProps> = (props: GalleryProps) => {
   return (
     <React.Fragment>
       <div className={styles.Gallery} aria-label="image_gallery">
-        {images.map((image: GalleryImageProps, index) => (
+        {images.map((image: Asset, index) => (
           <span className={styles.ImageWrapper} key={index}>
             <Image
               id={index}
               layout="responsive"
               loading="lazy"
               onClick={onClickImage}
-              src={image.src}
-              alt={image.alt}
+              src={image.url}
+              alt={image.description}
             />
           </span>
         ))}

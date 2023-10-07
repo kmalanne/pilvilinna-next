@@ -4,18 +4,18 @@ import type React from 'react'
 import { useEffect, useState } from 'react'
 import { createPortal } from 'react-dom'
 
+import type { Asset } from '@/lib/types'
+
 import styles from './lightbox.module.css'
-import { type GalleryImageProps, GalleryImage as Image } from '../Gallery/Image'
+import { GalleryImage as Image } from '../Gallery/GalleryImage'
 
 export type LightboxProps = {
   current: number
-  images: Array<GalleryImageProps>
+  images: Array<Asset>
   onClose: () => void
 }
 
-export const Lightbox: React.FC<LightboxProps> = (props: LightboxProps) => {
-  const { current, images, onClose } = props
-
+export const Lightbox: React.FC<LightboxProps> = ({ current, images, onClose }: LightboxProps) => {
   const [currentImage, setCurrentImage] = useState(current)
 
   useEffect(() => {
@@ -116,8 +116,8 @@ export const Lightbox: React.FC<LightboxProps> = (props: LightboxProps) => {
         layout="intrinsic"
         loading="eager"
         onClick={onClickImage}
-        src={image.src}
-        alt={image.alt}
+        src={image.url}
+        alt={image.description}
       />
     )
   }

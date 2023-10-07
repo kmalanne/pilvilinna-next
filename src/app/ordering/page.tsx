@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 
 import { Ordering as OrderingSection } from '@/containers/Ordering'
-import { fetchOrderingCollection } from '@/contentful/api'
+import { fetchOrderingCollection } from '@/lib/api'
 import { strings } from '@/utils/strings'
 
 export const metadata: Metadata = {

@@ -1,6 +1,8 @@
 import type {
   AssortmentCollectionQueryResponse,
   AssortmentData,
+  ContactCollectionQueryResponse,
+  ContactData,
   HomeCollectionQueryResponse,
   HomeData,
   OrderingCollectionQueryResponse,
@@ -14,14 +16,26 @@ const homeQuery = `
   query homeCollectionQuery {
     homeCollection {
       items {
-        name,
+        slogan,
         about {
           json
+        },
+        heroImage {
+          url,
+          description
+        },
+        bakerImage {
+          url,
+          description
         },
         serviceItemsCollection(limit: 3) {
           items {
             title,
-            text
+            text,
+            image {
+              url,
+              description
+            }
           }
         },
         testimonialsCollection (limit: 4) {
@@ -42,13 +56,23 @@ const assortmentQuery = `
         infoText {
           json
         },
-        productsCollection(order: order_ASC) {
+        bannerImage {
+          url,
+          description
+        },
+        productsCollection(order: order_ASC, limit: 15) {
           items {
             title,
             price,
             description {
               json
             }
+          }
+        },
+        galleryImagesCollection(limit: 20) {
+          items {
+            url,
+            description
           }
         }
       }
@@ -60,9 +84,29 @@ const orderingQuery = `
   query orderingCollectionQuery {
     orderingCollection {
       items {
+        bannerImage {
+          url,
+          description
+        },
         termsOfOrderingAndDelivery {
           json,
         }
+      }
+    }
+  }
+`
+
+const contactQuery = `
+  query contactCollectionQuery {
+    contactCollection {
+      items {
+        bannerImage {
+          url,
+          description
+        },
+        email,
+        phoneNumber,
+        companyInfo
       }
     }
   }
@@ -107,4 +151,10 @@ export const fetchOrderingCollection = async (): Promise<OrderingData | undefine
   const data = await doQuery<OrderingCollectionQueryResponse>(orderingQuery)
 
   return data?.data?.orderingCollection.items[0]
+}
+
+export const fetchContactCollection = async (): Promise<ContactData | undefined> => {
+  const data = await doQuery<ContactCollectionQueryResponse>(contactQuery)
+
+  return data?.data?.contactCollection.items[0]
 }

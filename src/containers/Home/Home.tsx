@@ -7,7 +7,7 @@ import { Col, Container, Row } from 'react-bootstrap'
 import { RichText } from '@/components/RichText'
 import { ServiceWrapper } from '@/components/ServiceWrapper'
 import { TestimonialWrapper } from '@/components/TestimonialWrapper'
-import type { HomeData } from '@/contentful/types'
+import type { HomeData } from '@/lib/types'
 import { AppRoute } from '@/utils/route'
 import { strings } from '@/utils/strings'
 
@@ -17,12 +17,12 @@ export type HomeProps = {
   data?: HomeData
 }
 
-export const Home = ({ data }: HomeProps) => (
+export const Home: React.FC<HomeProps> = ({ data }: HomeProps) => (
   <section aria-labelledby="title">
     <div className={styles.HeroContainer}>
       <Image
-        src="/images/hero.jpg"
-        alt="hero"
+        src={data?.heroImage.url || ''}
+        alt={data?.heroImage.description || 'alt'}
         fill
         style={{
           objectFit: 'cover',
@@ -33,7 +33,7 @@ export const Home = ({ data }: HomeProps) => (
       <h1 className={styles.Heading} id="title">
         {strings.home.title}
       </h1>
-      <p className={styles.HeroText}>{strings.home.slogan}</p>
+      <p className={styles.HeroText}>{data?.slogan}</p>
       <Link className={styles.LinkButton} href={AppRoute.Contact}>
         {strings.contact.contact}
       </Link>
@@ -46,13 +46,13 @@ export const Home = ({ data }: HomeProps) => (
           <p className={styles.Signature}>{strings.home.signature}</p>
           <div className={styles.ImageWrapper}>
             <Image
-              src="/images/anna.jpg"
+              src={data?.bakerImage.url || ''}
+              alt={data?.bakerImage.description || 'alt'}
               width={0}
               height={0}
               sizes="100vw"
               style={{ width: '40%', height: '40%' }}
               loading="lazy"
-              alt={strings.home.bakerImage}
             />
           </div>
         </Col>
