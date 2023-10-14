@@ -2,10 +2,18 @@
 .Link {
   margin-left: 5px;
   margin-right: 5px;
-  color: #454545;
+  color: #09083e;
   text-decoration: none;
 }
 
 .Link:hover {
-  color: #32260d;
+  color: #000000;
+}
+
+.Link > svg {
+  transition: transform 0.15s ease-out;
+}
+
+.Link > svg:hover {
+  transform: scale(1.03);
 }

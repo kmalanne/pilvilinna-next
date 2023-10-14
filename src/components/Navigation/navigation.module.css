@@ -159,13 +159,13 @@
   font-size: 18px;
   font-weight: 600;
   text-decoration: none;
-  color: #454545;
+  color: #09083e;
   border: 1px solid transparent;
 }
 
 .Link:hover {
-  color: #32260d;
-  border-bottom: 1px solid #32260d;
+  color: #000000;
+  border-bottom: 1px solid #000000;
 }
 
 @media (max-width: 1000px) {

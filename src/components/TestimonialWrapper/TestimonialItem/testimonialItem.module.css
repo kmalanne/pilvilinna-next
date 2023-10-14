@@ -7,14 +7,14 @@
   border-radius: 4px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   padding: 2rem 2rem;
-  color: #454545;
+  color: #09083e;
   height: 100%;
   width: 100%;
 }
 
 .Item svg {
   font-size: 45px;
-  color: #454545;
+  color: #09083e;
 }
 
 /* TextWrapper Styles */
@@ -24,11 +24,17 @@
 
 /* Testimonial Styles */
 .Testimonial {
-  font-size: 24px;
+  font-size: 20px;
+}
+
+@media (max-width: 575px) {
+  .Testimonial {
+    font-size: 18px;
+  }
 }
 
 /* Author Styles */
 .Author {
   font-weight: bold;
-  font-size: 18px;
+  font-size: 16px;
 }

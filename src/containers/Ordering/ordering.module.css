@@ -5,6 +5,7 @@
   max-width: 100%;
   padding: 90px;
   background-color: #ffffff;
+  color: #09083e;
 }
 
 @media (max-width: 575px) {
@@ -28,5 +29,11 @@
 
 /* Text Styles */
 .Container p {
-  font-size: 18px;
+  font-size: 20px;
+}
+
+@media (max-width: 575px) {
+  .Container p {
+    font-size: 18px;
+  }
 }

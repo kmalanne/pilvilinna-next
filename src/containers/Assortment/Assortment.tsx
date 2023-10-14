@@ -32,7 +32,7 @@ export const Assortment: React.FC<AssortmentProps> = ({ data }: AssortmentProps)
               {product.title} <span className={styles.ItemHeaderPrice}>{product.price}</span>
             </p>
           </div>
-          <div className={styles.ListItem}>
+          <div>
             <RichText document={product.description.json} />
           </div>
         </div>

@@ -8,12 +8,15 @@
   margin-right: 0px;
   margin-left: 0px;
   max-width: 100%;
+  font-size: 20px;
+  color: #09083e;
 }
 
 @media (max-width: 575px) {
   .Container {
     padding-left: 30px;
     padding-right: 30px;
+    font-size: 18px;
   }
 }
 
@@ -40,15 +43,9 @@
   border-bottom: dotted 1px;
 }
 
-/* Text Styles */
-.Text {
-  font-size: 18px;
-}
-
 /* ItemHeaderText Styles */
 .ItemHeaderText {
   margin-bottom: 0px;
-  font-size: 18px;
   font-weight: bold;
 }
 
@@ -56,16 +53,9 @@
 .ItemHeaderPrice {
   float: right;
   color: #5e5185;
-  font-size: 20px;
-}
-
-/* ListItem Styles */
-.ListItem {
-  font-size: 18px;
 }
 
 /* InfoText Styles */
 .InfoText {
-  font-size: 16px;
   margin-top: 40px;
 }
