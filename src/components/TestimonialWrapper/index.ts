@@ -1,0 +1,1 @@
+export { TestimonialWrapper } from './TestimonialWrapper'

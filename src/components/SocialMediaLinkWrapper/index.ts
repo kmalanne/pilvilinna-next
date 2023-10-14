@@ -1,0 +1,1 @@
+export { SocialMediaLinkWrapper } from './SocialMediaLinkWrapper'

@@ -1,0 +1,175 @@
+/* Nav Styles */
+.Nav {
+  background-color: #ffffff;
+  z-index: 10;
+}
+
+.Container {
+  margin-left: 0px;
+  margin-right: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+/* Container Styles */
+@media (min-width: 1000px) {
+  .Container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+@media (min-width: 576px) {
+  .Container {
+    max-width: 100%;
+  }
+}
+
+/* Navbar Styles */
+.Navbar {
+  height: 85px;
+  padding: 0;
+}
+
+/* Brand Styles */
+.Brand {
+  position: absolute;
+  left: 50%;
+  top: 0px;
+  transform: translateX(-50%);
+  margin-right: 0px;
+  z-index: 30;
+}
+
+@media (max-width: 1000px) {
+  .Brand {
+    position: relative;
+    left: 0%;
+    top: 0px;
+    transform: translateX(-0%);
+    padding-left: 15px;
+  }
+}
+
+/* ImageWrapper Styles */
+.ImageWrapper {
+  position: relative;
+  width: 160px;
+  height: 160px;
+}
+
+.ImageWrapper > img {
+  border-radius: 50%;
+  box-shadow: 0 5px 2px -2px grey;
+}
+
+@media (max-width: 1000px) {
+  .ImageWrapper {
+    width: 60px;
+    height: 60px;
+  }
+
+  .ImageWrapper > img {
+    border-radius: 50%;
+  }
+}
+
+/* Toggle Styles */
+.Toggle {
+  margin: 0px;
+  padding: 0px;
+  margin-top: 28px;
+  margin-bottom: 28px;
+  border: none;
+  outline: none;
+}
+
+@media (max-width: 1000px) {
+  .Toggle {
+    margin-right: 15px;
+  }
+}
+
+/* Collapse Styles */
+.Collapse {
+  background-color: #ffffff;
+  z-index: 20;
+}
+
+@media (max-width: 1000px) {
+  .Collapse {
+    margin-top: -1px;
+  }
+}
+
+/* NavLeft Styles */
+.NavLeft > .Link {
+  margin-right: 30px;
+}
+
+.NavLeft > .Link:last-child {
+  margin-right: 0px;
+}
+
+@media (max-width: 1000px) {
+  .NavLeft {
+    padding-left: 15px;
+  }
+
+  .NavLeft > .Link {
+    margin-right: 15px;
+  }
+
+  .NavLeft > .Link:last-child {
+    margin-right: 15px;
+  }
+}
+
+/* NavRight Styles */
+.NavRight {
+  margin-left: auto;
+}
+
+.NavRight > .Link {
+  margin-left: 30px;
+}
+
+.NavRight > .Link:first-child {
+  margin-left: 0px;
+}
+
+@media (max-width: 1000px) {
+  .NavRight > .Link {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+
+  .NavRight > .Link:first-child {
+    margin-left: 15px;
+  }
+
+  .NavRight > .Link:last-child {
+    border-bottom: none;
+  }
+}
+
+/* Link Styles */
+.Link {
+  position: relative;
+  font-size: 18px;
+  font-weight: 600;
+  text-decoration: none;
+  color: #09083e;
+  border: 1px solid transparent;
+}
+
+.Link:hover {
+  color: #000000;
+  border-bottom: 1px solid #000000;
+}
+
+@media (max-width: 1000px) {
+  .Link {
+    line-height: 44px;
+  }
+}

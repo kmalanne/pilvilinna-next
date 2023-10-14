@@ -1,0 +1,22 @@
+/* Container Styles */
+.Container {
+  position: relative;
+  padding: 8rem 2rem;
+  margin-bottom: 0px;
+  border-radius: 0px;
+  opacity: 0.8;
+}
+
+.Container > img {
+  z-index: -10;
+}
+
+/* Title Styles */
+.Title {
+  text-align: center;
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: #000000;
+  opacity: 1;
+  z-index: 1;
+}

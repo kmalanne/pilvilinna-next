@@ -1,10 +1,19 @@
 /** @type {import('next').NextConfig} */
-const { i18n } = require('./next-i18next.config');
 
 module.exports = {
-  i18n,
   reactStrictMode: true,
-  compiler: {
-    styledComponents: true,
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'images.ctfassets.net',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'downloads.ctfassets.net',
+        pathname: '/**',
+      },
+    ],
   },
-};
+}

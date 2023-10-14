@@ -1,0 +1,39 @@
+/* Container Styles */
+.Container {
+  margin-right: 0px;
+  margin-left: 0px;
+  max-width: 100%;
+  padding: 90px;
+  background-color: #ffffff;
+  color: #09083e;
+}
+
+@media (max-width: 575px) {
+  .Container {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
+@media (min-width: 1100px) {
+  .Container {
+    padding-left: 200px;
+    padding-right: 200px;
+  }
+}
+
+/* Heading Styles */
+.Container h2 {
+  margin-bottom: 20px;
+}
+
+/* Text Styles */
+.Container p {
+  font-size: 20px;
+}
+
+@media (max-width: 575px) {
+  .Container p {
+    font-size: 18px;
+  }
+}

@@ -1,0 +1,24 @@
+/* Gallery Styles */
+.Gallery {
+  display: grid;
+  grid-auto-flow: dense;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 1rem;
+  padding: 0.5rem;
+}
+
+/* ImageWrapper Styles */
+.ImageWrapper {
+  grid-area: span 1 / span 1;
+}
+
+.ImageWrapper > img {
+  border-radius: 4px;
+  cursor: pointer;
+  filter: grayscale(0%);
+  transition: all 0.5s ease;
+}
+
+.ImageWrapper > img:hover {
+  filter: grayscale(80%);
+}
