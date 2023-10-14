@@ -129,9 +129,17 @@
 
 /* ServiceContainer Styles */
 .ServiceContainer {
+  margin-right: 0px;
+  margin-left: 0px;
   max-width: 100%;
   padding: 4rem;
   background-color: #ffffff;
+}
+
+@media (max-width: 575px) {
+  .ServiceContainer {
+    padding: 4rem 2rem;
+  }
 }
 
 /* TestimonialContainer Styles */

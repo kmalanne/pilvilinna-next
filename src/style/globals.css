@@ -32,6 +32,6 @@ nav.sticky + main {
 }
 
 a.link-active {
-  color: #32260d;
-  border-bottom: 1px solid #32260d;
+  color: #000000;
+  border-bottom: 1px solid #000000;
 }
