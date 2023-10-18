@@ -1,10 +1,6 @@
 {
   "plugins": ["@typescript-eslint"],
-  "extends": [
-    "next/core-web-vitals",
-    "prettier",
-    "plugin:react/jsx-runtime"
-  ],
+  "extends": ["next/core-web-vitals", "prettier", "plugin:react/jsx-runtime"],
   "ignorePatterns": ["/docs"],
   "rules": {
     "arrow-body-style": ["error", "as-needed"],
@@ -39,13 +35,6 @@
         },
         "groups": ["builtin", "external", "internal", ["sibling", "parent"], "index", "unknown"],
         "newlines-between": "always",
-        "pathGroups": [
-          {
-            "group": "external",
-            "pattern": "@fortum/**",
-            "position": "after"
-          }
-        ],
         "pathGroupsExcludedImportTypes": ["builtin"]
       }
     ],
