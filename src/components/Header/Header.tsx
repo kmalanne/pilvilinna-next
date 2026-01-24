@@ -2,7 +2,6 @@
 
 import { faEnvelope, faPhoneAlt } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import type React from 'react'
 import { Container } from 'react-bootstrap'
 
 import type { ContactData } from '@/lib/types'
@@ -14,7 +13,7 @@ export type HeaderProps = {
   data?: ContactData
 }
 
-export const Header: React.FC<HeaderProps> = ({ data }: HeaderProps) => (
+export const Header = ({ data }: HeaderProps) => (
   <header className={styles.Header}>
     <Container className={styles.Container}>
       <div className={styles.LeftContainer}>

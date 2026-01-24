@@ -1,41 +1,37 @@
 {
   "name": "pilvilinna-next",
-  "version": "0.1.0",
+  "version": "1.5.0",
   "private": true,
   "dependencies": {
-    "@contentful/rich-text-react-renderer": "^15.18.0",
-    "@contentful/rich-text-types": "^16.3.0",
-    "@fortawesome/fontawesome-svg-core": "1.2.36",
-    "@fortawesome/free-brands-svg-icons": "5.15.4",
-    "@fortawesome/free-solid-svg-icons": "5.15.4",
-    "@fortawesome/react-fontawesome": "0.2.0",
-    "bootstrap": "5.3.2",
-    "next": "13.5.4",
-    "react": "18.2.0",
-    "react-bootstrap": "2.5.0",
-    "react-dom": "18.2.0"
+    "@contentful/rich-text-react-renderer": "^16.1.6",
+    "@contentful/rich-text-types": "^17.2.5",
+    "@fortawesome/fontawesome-svg-core": "7.1.0",
+    "@fortawesome/free-brands-svg-icons": "7.1.0",
+    "@fortawesome/free-solid-svg-icons": "7.1.0",
+    "@fortawesome/react-fontawesome": "3.1.1",
+    "bootstrap": "5.3.8",
+    "next": "16.1.4",
+    "react": "19.2.3",
+    "react-bootstrap": "2.10.10",
+    "react-dom": "19.2.3"
   },
   "devDependencies": {
-    "@types/jest": "29.5.5",
-    "@types/node": "20.7.2",
-    "@types/react": "18.2.23",
-    "@types/react-bootstrap": "0.32.33",
-    "@types/react-dom": "18.2.8",
-    "@typescript-eslint/eslint-plugin": "6.7.3",
-    "@typescript-eslint/parser": "6.7.3",
-    "eslint": "8.50.0",
-    "eslint-config-next": "13.5.3",
-    "eslint-config-prettier": "9.0.0",
-    "prettier": "3.0.3",
-    "typescript": "5.2.2"
+    "@types/jest": "30.0.0",
+    "@types/node": "25.0.10",
+    "@types/react": "19.2.9",
+    "@types/react-bootstrap": "1.1.0",
+    "@types/react-dom": "19.2.3",
+    "eslint": "9.39.2",
+    "eslint-config-next": "16.1.4",
+    "eslint-config-prettier": "10.1.8",
+    "prettier": "3.8.1",
+    "typescript": "5.9.3"
   },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
-  },
-  "engines": {
-    "node": ">=18.17"
+    "start": "next start",
+    "lint": "eslint ."
   },
   "browserslist": [
     "defaults"

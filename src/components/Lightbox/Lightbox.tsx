@@ -15,16 +15,15 @@ export type LightboxProps = {
   onClose: () => void
 }
 
-export const Lightbox: React.FC<LightboxProps> = ({ current, images, onClose }: LightboxProps) => {
+export const Lightbox = ({ current, images, onClose }: LightboxProps) => {
   const [currentImage, setCurrentImage] = useState(current)
 
-  useEffect(() => {
-    document.addEventListener('keydown', handleKeyDown, false)
+  const closeLightbox = () => {
+    onClose()
+  }
 
-    return () => {
-      document.removeEventListener('keydown', handleKeyDown, false)
-    }
-  })
+  const prevImage = () => setCurrentImage(currentImage - 1)
+  const nextImage = () => setCurrentImage(currentImage + 1)
 
   const handleKeyDown = (event: KeyboardEvent): boolean => {
     if (event) {
@@ -47,6 +46,14 @@ export const Lightbox: React.FC<LightboxProps> = ({ current, images, onClose }: 
         return false
     }
   }
+
+  useEffect(() => {
+    document.addEventListener('keydown', handleKeyDown, false)
+
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown, false)
+    }
+  })
 
   const onClickClose = (
     event: React.MouseEvent<HTMLElement> | React.TouchEvent<HTMLElement>,
@@ -74,10 +81,6 @@ export const Lightbox: React.FC<LightboxProps> = ({ current, images, onClose }: 
     nextImage()
   }
 
-  const closeLightbox = () => {
-    onClose()
-  }
-
   const onClickPrev = (event?: React.MouseEvent<HTMLElement> | React.TouchEvent<HTMLElement>) => {
     if (currentImage === 0) {
       return
@@ -103,9 +106,6 @@ export const Lightbox: React.FC<LightboxProps> = ({ current, images, onClose }: 
 
     nextImage()
   }
-
-  const prevImage = () => setCurrentImage(currentImage - 1)
-  const nextImage = () => setCurrentImage(currentImage + 1)
 
   const renderImage = () => {
     const image = images[currentImage]

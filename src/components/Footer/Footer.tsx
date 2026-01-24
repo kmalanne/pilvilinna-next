@@ -1,6 +1,5 @@
 'use client'
 
-import type React from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
 
 import type { ContactData } from '@/lib/types'
@@ -13,7 +12,7 @@ export type FooterProps = {
   data?: ContactData
 }
 
-export const Footer: React.FC<FooterProps> = ({ data }: FooterProps) => (
+export const Footer = ({ data }: FooterProps) => (
   <footer>
     <Container className={styles.Container}>
       <Row>

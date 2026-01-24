@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { Fragment, useState } from 'react'
 
 import type { Asset } from '@/lib/types'
 
@@ -10,7 +10,7 @@ export type GalleryProps = {
   images?: Array<Asset>
 }
 
-export const Gallery: React.FC<GalleryProps> = ({ images }: GalleryProps) => {
+export const Gallery = ({ images }: GalleryProps) => {
   const [currentImage, setCurrentImage] = useState(-1)
   const [isModalOpen, setIsModalOpen] = useState(false)
 
@@ -45,7 +45,7 @@ export const Gallery: React.FC<GalleryProps> = ({ images }: GalleryProps) => {
   }
 
   return (
-    <React.Fragment>
+    <Fragment>
       <div className={styles.Gallery} aria-label="image_gallery">
         {images.map((image: Asset, index) => (
           <span className={styles.ImageWrapper} key={index}>
@@ -63,6 +63,6 @@ export const Gallery: React.FC<GalleryProps> = ({ images }: GalleryProps) => {
       {isModalOpen && (
         <Lightbox current={currentImage} images={images} onClose={onClickLightboxClose} />
       )}
-    </React.Fragment>
+    </Fragment>
   )
 }

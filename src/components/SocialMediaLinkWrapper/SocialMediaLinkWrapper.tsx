@@ -1,12 +1,11 @@
 import { faFacebookSquare, faInstagram } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import type React from 'react'
 
 import { strings } from '@/utils/strings'
 
 import styles from './socialMediaLinkWrapper.module.css'
 
-export const SocialMediaLinkWrapper: React.FC = () => (
+export const SocialMediaLinkWrapper = () => (
   <div aria-label={strings.navigation.socialNavigation}>
     <a
       className={styles.Link}

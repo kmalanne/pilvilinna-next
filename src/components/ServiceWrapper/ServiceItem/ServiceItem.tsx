@@ -1,5 +1,4 @@
 import Image from 'next/image'
-import type React from 'react'
 
 import type { ServiceItem as TServiceItem } from '@/lib/types'
 
@@ -9,7 +8,7 @@ export type ServiceItemProps = {
   item: TServiceItem
 }
 
-export const ServiceItem: React.FC<ServiceItemProps> = ({ item }: ServiceItemProps) => (
+export const ServiceItem = ({ item }: ServiceItemProps) => (
   <div className={styles.Item} aria-label="service">
     <div className={styles.Image}>
       <Image

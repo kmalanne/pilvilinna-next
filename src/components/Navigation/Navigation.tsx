@@ -4,7 +4,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useEffect, useRef, useState } from 'react'
-import type React from 'react'
+
 import { Container as BSContainer, Nav as BSNav, Navbar as BSNavbar } from 'react-bootstrap'
 
 import { strings } from '@/utils/strings'
@@ -14,17 +14,10 @@ import { AppRoute } from '../../utils/route'
 
 const activeLink = (url: string, pathname: string) => (pathname === url ? 'link-active' : '')
 
-export const Navigation: React.FC = () => {
+export const Navigation = () => {
   const pathname = usePathname()
   const [isExpanded, setExpanded] = useState(false)
-  const containerRef = useRef<HTMLDivElement>()
-
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll)
-    return () => {
-      window.removeEventListener('scroll', handleScroll)
-    }
-  })
+  const containerRef = useRef<HTMLDivElement>(null)
 
   const handleScroll = () => {
     const element = containerRef ? containerRef.current : undefined
@@ -40,6 +33,13 @@ export const Navigation: React.FC = () => {
     }
   }
 
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll)
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    }
+  })
+
   const onToggle = () => {
     if (window.innerWidth <= 999) {
       setExpanded(!isExpanded)
@@ -47,7 +47,7 @@ export const Navigation: React.FC = () => {
   }
 
   return (
-    // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-explicit-any
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     <nav className={styles.Nav} ref={containerRef as any}>
       <BSContainer className={styles.Container}>
         <BSNavbar

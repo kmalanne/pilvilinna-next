@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import React from 'react'
+import { Fragment } from 'react'
 
 export type Layout = 'intrinsic' | 'fill' | 'responsive'
 export type Loading = 'eager' | 'lazy'
@@ -13,7 +13,7 @@ export type GalleryImageProps = {
   alt?: string
 }
 
-export const GalleryImage: React.FC<GalleryImageProps> = (props: GalleryImageProps) => {
+export const GalleryImage = (props: GalleryImageProps) => {
   const { id, layout, loading, onClick, src, alt = 'image' } = props
 
   const onImageClick = (event: React.MouseEvent<HTMLElement> | React.TouchEvent<HTMLElement>) => {
@@ -27,17 +27,21 @@ export const GalleryImage: React.FC<GalleryImageProps> = (props: GalleryImagePro
     }
   }
 
+  const imageProps = layout === 'fill' 
+    ? { fill: true, style: { objectFit: 'contain' as const } }
+    : layout === 'responsive'
+    ? { width: 1843, height: 1382, style: { width: '100%', height: 'auto' } }
+    : { width: 1843, height: 1382 }
+
   return (
-    <React.Fragment>
+    <Fragment>
       <Image
         src={src}
-        width={1843}
-        height={1382}
-        layout={layout}
+        {...imageProps}
         loading={loading}
         onClick={onImageClick}
         alt={alt}
       />
-    </React.Fragment>
+    </Fragment>
   )
 }

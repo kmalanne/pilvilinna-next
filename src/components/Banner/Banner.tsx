@@ -1,5 +1,4 @@
 import Image from 'next/image'
-import type React from 'react'
 
 import styles from './banner.module.css'
 
@@ -9,16 +8,17 @@ export type BannerProps = {
   description?: string
 }
 
-export const Banner: React.FC<BannerProps> = ({ text, url, description }: BannerProps) => (
+export const Banner = ({ text, url, description }: BannerProps) => (
   <div className={styles.Container} aria-labelledby="title">
-    <Image
-      src={url || ''}
-      alt={description || 'alt'}
-      layout="fill"
-      objectFit="cover"
-      objectPosition="center"
-      priority={true}
-    ></Image>
+    {url && (
+      <Image
+        src={url}
+        alt={description || 'alt'}
+        fill
+        style={{ objectFit: 'cover', objectPosition: 'center' }}
+        priority={true}
+      />
+    )}
     <h1 id="title" className={styles.Title}>
       {text}
     </h1>
