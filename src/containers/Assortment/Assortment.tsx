@@ -1,7 +1,5 @@
 'use client'
 
-import { Container as BSContainer } from 'react-bootstrap'
-
 import { Banner } from '@/components/Banner'
 import { Gallery } from '@/components/Gallery'
 import { RichText } from '@/components/RichText'
@@ -21,7 +19,7 @@ export const Assortment: React.FC<AssortmentProps> = ({ data }: AssortmentProps)
       url={data?.bannerImage.url}
       description={data?.bannerImage.description}
     ></Banner>
-    <BSContainer className={styles.Container}>
+    <div className={styles.Container}>
       <h2 className={styles.Heading} id="assortment-title">
         {strings.assortment.title}
       </h2>
@@ -40,10 +38,10 @@ export const Assortment: React.FC<AssortmentProps> = ({ data }: AssortmentProps)
       <div className={styles.InfoText}>
         <RichText document={data?.infoText.json} />
       </div>
-    </BSContainer>
-    <BSContainer className={`${styles.Container} ${styles.GalleryContainer}`}>
+    </div>
+    <div className={`${styles.Container} ${styles.GalleryContainer}`}>
       <h2 className="sr-only">Cake gallery</h2>
       <Gallery images={data?.galleryImagesCollection.items}></Gallery>
-    </BSContainer>
+    </div>
   </section>
 )

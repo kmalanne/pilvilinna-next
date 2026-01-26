@@ -1,7 +1,5 @@
 'use client'
 
-import { Container as BSContainer } from 'react-bootstrap'
-
 import { Banner } from '@/components/Banner'
 import { RichText } from '@/components/RichText'
 import type { OrderingData } from '@/lib/types'
@@ -20,8 +18,8 @@ export const Ordering: React.FC<OrderingProps> = ({ data }: OrderingProps) => (
       url={data?.bannerImage.url}
       description={data?.bannerImage.description}
     ></Banner>
-    <BSContainer className={styles.Container}>
+    <div className={styles.Container}>
       <RichText document={data?.termsOfOrderingAndDelivery?.json} />
-    </BSContainer>
+    </div>
   </section>
 )

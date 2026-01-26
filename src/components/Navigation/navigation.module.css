@@ -1,4 +1,4 @@
-/* Nav Styles */
+
 .Nav {
   background-color: #ffffff;
   z-index: 10;
@@ -11,7 +11,6 @@
   padding-right: 0px;
 }
 
-/* Container Styles */
 @media (min-width: 1000px) {
   .Container {
     padding-left: 1rem;
@@ -25,13 +24,22 @@
   }
 }
 
-/* Navbar Styles */
 .Navbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
   height: 85px;
   padding: 0;
+  position: relative;
 }
 
-/* Brand Styles */
+@media (max-width: 1000px) {
+  .Navbar {
+    height: auto;
+  }
+}
+
 .Brand {
   position: absolute;
   left: 50%;
@@ -51,7 +59,6 @@
   }
 }
 
-/* ImageWrapper Styles */
 .ImageWrapper {
   position: relative;
   width: 160px;
@@ -74,35 +81,76 @@
   }
 }
 
-/* Toggle Styles */
 .Toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 24px;
   margin: 0px;
   padding: 0px;
   margin-top: 28px;
   margin-bottom: 28px;
   border: none;
   outline: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.ToggleIcon {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: #09083e;
+  border-radius: 2px;
+  transition: all 0.3s ease;
 }
 
 @media (max-width: 1000px) {
   .Toggle {
+    display: flex;
     margin-right: 15px;
   }
 }
 
-/* Collapse Styles */
 .Collapse {
+  display: flex;
+  flex-basis: auto;
+  flex-grow: 1;
+  align-items: center;
   background-color: #ffffff;
   z-index: 20;
 }
 
 @media (max-width: 1000px) {
   .Collapse {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-basis: 100%;
+    flex-grow: 1;
+    align-items: flex-start;
+    flex-direction: column;
     margin-top: -1px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+  }
+
+  .Collapse.Show {
+    display: flex;
+    max-height: 500px;
   }
 }
 
-/* NavLeft Styles */
+.NavLeft {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-right: auto;
+}
+
 .NavLeft > .Link {
   margin-right: 30px;
 }
@@ -113,6 +161,9 @@
 
 @media (max-width: 1000px) {
   .NavLeft {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
     padding-left: 15px;
   }
 
@@ -125,8 +176,10 @@
   }
 }
 
-/* NavRight Styles */
 .NavRight {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   margin-left: auto;
 }
 
@@ -139,6 +192,13 @@
 }
 
 @media (max-width: 1000px) {
+  .NavRight {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    margin-left: 0;
+  }
+
   .NavRight > .Link {
     margin-left: 15px;
     margin-right: 15px;
@@ -153,7 +213,6 @@
   }
 }
 
-/* Link Styles */
 .Link {
   position: relative;
   font-size: 18px;

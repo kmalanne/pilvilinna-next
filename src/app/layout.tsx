@@ -7,7 +7,6 @@ import { Header } from '@/components/Header'
 import { Navigation } from '@/components/Navigation'
 import { fetchContactCollection } from '@/lib/api'
 import '../style/globals.css'
-import 'bootstrap/dist/css/bootstrap.min.css'
 
 const josefinSlab = Josefin_Slab({ weight: '400', subsets: ['latin'] })
 

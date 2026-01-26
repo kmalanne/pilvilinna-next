@@ -2,12 +2,8 @@
   background-color: #ffffff;
 }
 
-/* Container Styles */
 .Container {
   padding: 90px;
-  margin-right: 0px;
-  margin-left: 0px;
-  max-width: 100%;
   font-size: 20px;
   color: #09083e;
 }
@@ -27,35 +23,29 @@
   }
 }
 
-/* GalleryContainer Styles */
 .GalleryContainer {
   background-color: #c0b2a3;
 }
 
-/* Heading Styles */
 .Heading {
   margin-bottom: 20px;
 }
 
-/* ItemHeader Styles */
 .ItemHeader {
   margin-bottom: 20px;
   border-bottom: dotted 1px;
 }
 
-/* ItemHeaderText Styles */
 .ItemHeaderText {
   margin-bottom: 0px;
   font-weight: bold;
 }
 
-/* ItemHeaderPrice Styles */
 .ItemHeaderPrice {
   float: right;
   color: #5e5185;
 }
 
-/* InfoText Styles */
 .InfoText {
   margin-top: 40px;
 }

@@ -1,7 +1,5 @@
 'use client'
 
-import { Col, Container, Row } from 'react-bootstrap'
-
 import type { ContactData } from '@/lib/types'
 import { strings } from '@/utils/strings'
 
@@ -14,33 +12,33 @@ export type FooterProps = {
 
 export const Footer = ({ data }: FooterProps) => (
   <footer>
-    <Container className={styles.Container}>
-      <Row>
-        <Col className={styles.Col} sm>
+    <div className={styles.Container}>
+      <div className={styles.Row}>
+        <div className={styles.Col}>
           <div className={styles.Heading}>{strings.footer.email}:</div>
           <a className={styles.Link} href={`mailto:${data?.email}`}>
             {data?.email}
           </a>
-        </Col>
-        <Col className={styles.Col} sm>
+        </div>
+        <div className={styles.Col}>
           <div className={styles.Heading}>{strings.footer.phone}:</div>
           <a className={styles.Link} href={`tel:${data?.phoneNumber}`}>
             {data?.phoneNumber}
           </a>
-        </Col>
-        <Col className={styles.Col} sm>
+        </div>
+        <div className={styles.Col}>
           <div className={styles.Heading}>{strings.footer.company}:</div>
           <p className={styles.Text}>{data?.companyInfo}</p>
           <a className={styles.Link} href="https://www.oivahymy.fi/" target="_blank">
             oivahymy.fi
           </a>
-        </Col>
-      </Row>
-      <Row>
-        <Col className={styles.SocialMediaCol}>
+        </div>
+      </div>
+      <div className={styles.Row}>
+        <div className={styles.SocialMediaCol}>
           <SocialMediaLinkWrapper />
-        </Col>
-      </Row>
-    </Container>
+        </div>
+      </div>
+    </div>
   </footer>
 )

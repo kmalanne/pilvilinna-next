@@ -2,7 +2,6 @@
 
 import { faEnvelope, faPhoneAlt } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { Container } from 'react-bootstrap'
 
 import type { ContactData } from '@/lib/types'
 
@@ -15,7 +14,7 @@ export type HeaderProps = {
 
 export const Header = ({ data }: HeaderProps) => (
   <header className={styles.Header}>
-    <Container className={styles.Container}>
+    <div className={styles.Container}>
       <div className={styles.LeftContainer}>
         <a className={styles.Link} href={`tel:${data?.phoneNumber}`} aria-label="phone">
           <FontAwesomeIcon className={styles.Icon} icon={faPhoneAlt} size="lg"></FontAwesomeIcon>
@@ -29,6 +28,6 @@ export const Header = ({ data }: HeaderProps) => (
       <div className={styles.RightContainer}>
         <SocialMediaLinkWrapper />
       </div>
-    </Container>
+    </div>
   </header>
 )

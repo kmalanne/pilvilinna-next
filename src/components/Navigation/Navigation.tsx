@@ -5,8 +5,6 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useEffect, useRef, useState } from 'react'
 
-import { Container as BSContainer, Nav as BSNav, Navbar as BSNavbar } from 'react-bootstrap'
-
 import { strings } from '@/utils/strings'
 
 import styles from './navigation.module.css'
@@ -49,22 +47,25 @@ export const Navigation = () => {
   return (
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     <nav className={styles.Nav} ref={containerRef as any}>
-      <BSContainer className={styles.Container}>
-        <BSNavbar
-          className={styles.Navbar}
-          collapseOnSelect
-          expanded={isExpanded}
-          onToggle={onToggle}
-          expand="lg"
-        >
-          <BSNavbar.Brand className={styles.Brand}>
+      <div className={styles.Container}>
+        <div className={styles.Navbar}>
+          <div className={styles.Brand}>
             <div className={styles.ImageWrapper}>
               <Image fill={true} src="/images/logo.jpg" alt={strings.navigation.logo} />
             </div>
-          </BSNavbar.Brand>
-          <BSNavbar.Toggle className={styles.Toggle} aria-controls="responsive-navbar-nav" />
-          <BSNavbar.Collapse className={styles.Collapse} id="responsive-navbar-nav">
-            <BSNav className={`${styles.NavLeft} mr-auto`}>
+          </div>
+          <button
+            className={styles.Toggle}
+            aria-controls="responsive-navbar-nav"
+            aria-expanded={isExpanded}
+            onClick={onToggle}
+          >
+            <span className={styles.ToggleIcon}></span>
+            <span className={styles.ToggleIcon}></span>
+            <span className={styles.ToggleIcon}></span>
+          </button>
+          <div className={`${styles.Collapse} ${isExpanded ? styles.Show : ''}`} id="responsive-navbar-nav">
+            <div className={styles.NavLeft}>
               <Link
                 className={`${styles.Link} ${activeLink(AppRoute.Home, pathname)}`}
                 href={AppRoute.Home}
@@ -79,8 +80,8 @@ export const Navigation = () => {
               >
                 {strings.navigation.assortment}
               </Link>
-            </BSNav>
-            <BSNav className={styles.NavRight}>
+            </div>
+            <div className={styles.NavRight}>
               <Link
                 className={`${styles.Link} ${activeLink(AppRoute.Ordering, pathname)}`}
                 href={AppRoute.Ordering}
@@ -98,10 +99,10 @@ export const Navigation = () => {
               <Link className={styles.Link} href="http://annaj-sukkiajasuklaata.blogspot.com/">
                 {strings.navigation.blog}
               </Link>
-            </BSNav>
-          </BSNavbar.Collapse>
-        </BSNavbar>
-      </BSContainer>
+            </div>
+          </div>
+        </div>
+      </div>
     </nav>
   )
 }

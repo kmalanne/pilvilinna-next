@@ -1,8 +1,4 @@
-/* Container Styles */
 .Container {
-  margin-right: 0px;
-  margin-left: 0px;
-  max-width: 100%;
   padding: 90px;
   background-color: #ffffff;
   color: #09083e;
@@ -22,12 +18,10 @@
   }
 }
 
-/* Heading Styles */
 .Container h2 {
   margin-bottom: 20px;
 }
 
-/* Text Styles */
 .Container p {
   font-size: 20px;
 }

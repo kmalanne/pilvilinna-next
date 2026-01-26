@@ -1,4 +1,4 @@
-/* Item Styles */
+
 .Item {
   display: flex;
   flex-direction: column;
@@ -6,7 +6,6 @@
   justify-content: center;
 }
 
-/* Title Styles */
 .Image {
   width: 150px;
   height: 150px;
@@ -16,7 +15,6 @@
   border-radius: 50%;
 }
 
-/* Title Styles */
 .Title {
   font-size: 24px;
   margin-top: 2rem;
@@ -24,7 +22,6 @@
   color: #09083e;
 }
 
-/* Text Styles */
 .Text {
   text-align: center;
   font-size: 20px;
