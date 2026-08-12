@@ -15,6 +15,7 @@ export const Banner = ({ text, url, description }: BannerProps) => (
         src={url}
         alt={description || 'alt'}
         fill
+        sizes="100vw"
         style={{ objectFit: 'cover', objectPosition: 'center' }}
         priority={true}
       />

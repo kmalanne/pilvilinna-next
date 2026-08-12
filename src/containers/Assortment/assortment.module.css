@@ -1,11 +1,11 @@
 .Assortment {
-  background-color: #ffffff;
+  background-color: var(--color-cream);
 }
 
 .Container {
-  padding: 90px;
+  padding: 56px 90px;
   font-size: 20px;
-  color: #09083e;
+  color: var(--color-ink);
 }
 
 @media (max-width: 575px) {
@@ -24,16 +24,12 @@
 }
 
 .GalleryContainer {
-  background-color: #c0b2a3;
-}
-
-.Heading {
-  margin-bottom: 20px;
+  background-color: var(--color-sand);
 }
 
 .ItemHeader {
   margin-bottom: 20px;
-  border-bottom: dotted 1px;
+  border-bottom: 1px dotted var(--color-border-strong);
 }
 
 .ItemHeaderText {
@@ -43,7 +39,8 @@
 
 .ItemHeaderPrice {
   float: right;
-  color: #5e5185;
+  font-weight: bold;
+  color: var(--color-plum);
 }
 
 .InfoText {

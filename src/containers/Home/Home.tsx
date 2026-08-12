@@ -19,39 +19,53 @@ export type HomeProps = {
 export const Home: React.FC<HomeProps> = ({ data }: HomeProps) => (
   <section aria-labelledby="title">
     <div className={styles.HeroContainer}>
-      <Image
-        src={data?.heroImage.url || ''}
-        alt={data?.heroImage.description || 'alt'}
-        fill
-        style={{
-          objectFit: 'cover',
-          objectPosition: 'center',
-        }}
-        priority={true}
-      ></Image>
+      {data?.heroImage.url && (
+        <Image
+          src={data.heroImage.url}
+          alt={data.heroImage.description || 'Pilvilinnan leipomon tilauskakku'}
+          fill
+          sizes="100vw"
+          style={{
+            objectFit: 'cover',
+            objectPosition: 'center',
+          }}
+          priority={true}
+        ></Image>
+      )}
       <h1 className={styles.Heading} id="title">
         {strings.home.title}
       </h1>
       <p className={styles.HeroText}>{data?.slogan}</p>
-      <Link className={styles.LinkButton} href={AppRoute.Contact}>
-        {strings.contact.contact}
-      </Link>
+      <div className={styles.HeroActions}>
+        <Link className={styles.LinkButton} href={AppRoute.Contact}>
+          {strings.contact.contact}
+        </Link>
+        <Link className={styles.LinkButtonSecondary} href={AppRoute.Assortment}>
+          {strings.home.assortmentCta}
+        </Link>
+      </div>
     </div>
     <div className={styles.BakerContainer}>
-      <h2 className="sr-only">{strings.home.headingAbout}</h2>
-      <div className={styles.BakerTextWrapper}>
-        <RichText document={data?.about.json} />
-        <p className={styles.Signature}>{strings.home.signature}</p>
-        <div className={styles.ImageWrapper}>
-          <Image
-            src={data?.bakerImage.url || ''}
-            alt={data?.bakerImage.description || 'alt'}
-            width={0}
-            height={0}
-            sizes="100vw"
-            style={{ width: '40%', height: '40%' }}
-            loading="lazy"
-          />
+      <div className={styles.BakerInner}>
+        <div className={styles.BakerMedia}>
+          <div className={styles.BakerFrame}>
+            {data?.bakerImage.url && (
+              <Image
+                src={data.bakerImage.url}
+                alt={data.bakerImage.description || 'Leipuri Anna, Pilvilinnan leipomo'}
+                width={0}
+                height={0}
+                sizes="(max-width: 991px) 70vw, 40vw"
+                style={{ width: '100%', height: 'auto' }}
+                loading="lazy"
+              />
+            )}
+          </div>
+          <p className={styles.Signature}>{strings.home.signature}</p>
+        </div>
+        <div className={styles.BakerTextWrapper}>
+          <h2 className={styles.Eyebrow}>{strings.home.headingAbout}</h2>
+          <RichText document={data?.about.json} />
         </div>
       </div>
     </div>

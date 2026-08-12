@@ -1,9 +1,73 @@
+:root {
+  /* Dreamy lavender neutrals (from logo) */
+  --color-cream: #f9f5fb; /* near-white, soft lavender */
+  --color-blush: #efe6f4; /* soft lilac page background */
+  --color-blush-deep: #e3d5ef; /* subtle gradient partner */
+  --color-sand: #cbb9dd; /* dusty lavender section background */
+  --color-sand-deep: #b6a1cf;
+
+  /* Ink & accents */
+  --color-ink: #282150; /* primary text, high contrast */
+  --color-ink-soft: #4a4272; /* secondary text */
+  --color-plum: #5d4f91; /* accent / prices / links */
+  --color-rose: #bb6f9e; /* orchid CTA accent */
+  --color-rose-deep: #a1568a;
+  --color-gold: #caa96b; /* gold accent, echoes the logo ring */
+  --color-gold-deep: #b28f4c;
+
+  /* Borders that contrast with both container and background */
+  --color-border: #dccbe6;
+  --color-border-strong: #c3a9d6;
+
+  /* Spacing scale (multiples of 8) */
+  --space-1: 8px;
+  --space-2: 16px;
+  --space-3: 24px;
+  --space-4: 32px;
+  --space-5: 48px;
+  --space-6: 64px;
+
+  /* Radii */
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-pill: 999px;
+
+  /* Soft, cool-tinted shadows (blur = 2x distance) */
+  --shadow-sm: 0 2px 4px rgba(60, 48, 90, 0.08);
+  --shadow-md: 0 6px 12px rgba(60, 48, 90, 0.1);
+  --shadow-lg: 0 12px 24px rgba(60, 48, 90, 0.12);
+}
+
 body {
   margin: 0;
-  font-family: 'Josefin Slab', serif;
+  font-family: var(--font-body), 'Josefin Slab', serif;
+  font-size: 16px;
+  color: var(--color-ink);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #f2e6e7;
+  background-color: var(--color-blush);
+  background-image: linear-gradient(180deg, var(--color-blush) 0%, var(--color-blush-deep) 100%);
+  background-attachment: fixed;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display), 'Josefin Slab', serif;
+  color: var(--color-ink);
+  letter-spacing: -0.01em;
+  line-height: 1.1;
+}
+
+::selection {
+  background-color: var(--color-rose);
+  color: var(--color-cream);
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 #root {
@@ -53,7 +117,7 @@ nav.sticky {
   position: fixed;
   top: 0;
   width: 100%;
-  box-shadow: 0 2px 2px -2px grey;
+  box-shadow: var(--shadow-sm);
 }
 
 nav.sticky + main {
@@ -61,6 +125,6 @@ nav.sticky + main {
 }
 
 a.link-active {
-  color: #000000;
-  border-bottom: 1px solid #000000;
+  color: var(--color-ink);
+  border-bottom: 2px solid var(--color-gold);
 }

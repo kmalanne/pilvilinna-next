@@ -20,7 +20,7 @@ export const Assortment: React.FC<AssortmentProps> = ({ data }: AssortmentProps)
       description={data?.bannerImage.description}
     ></Banner>
     <div className={styles.Container}>
-      <h2 className={styles.Heading} id="assortment-title">
+      <h2 className="sr-only" id="assortment-title">
         {strings.assortment.title}
       </h2>
       {data?.productsCollection.items.map((product, i) => (

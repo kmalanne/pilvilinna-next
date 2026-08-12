@@ -5,8 +5,18 @@ import { fetchHomeCollection } from '@/lib/api'
 import { strings } from '@/utils/strings'
 
 export const metadata: Metadata = {
-  title: strings.home.title,
+  title: {
+    absolute: 'Pilvilinnan leipomo – Tilauskakut ja leivonnaiset Nokialla',
+  },
   description: strings.home.description,
+  alternates: {
+    canonical: '/',
+  },
+  openGraph: {
+    title: 'Pilvilinnan leipomo – Tilauskakut ja leivonnaiset Nokialla',
+    description: strings.home.description,
+    url: '/',
+  },
 }
 
 const Home = async () => {

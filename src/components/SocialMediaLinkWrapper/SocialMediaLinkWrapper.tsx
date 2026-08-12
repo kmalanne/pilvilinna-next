@@ -1,6 +1,4 @@
-import { faFacebookSquare, faInstagram } from '@fortawesome/free-brands-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-
+import { Icon } from '@/components/Icon'
 import { strings } from '@/utils/strings'
 
 import styles from './socialMediaLinkWrapper.module.css'
@@ -13,7 +11,7 @@ export const SocialMediaLinkWrapper = () => (
       target="_blank"
       aria-label="Facebook"
     >
-      <FontAwesomeIcon icon={faFacebookSquare} size="2x" aria-label="Facebook"></FontAwesomeIcon>
+      <Icon name="facebook" size="2x" />
     </a>
     <a
       className={styles.Link}
@@ -21,7 +19,7 @@ export const SocialMediaLinkWrapper = () => (
       target="_blank"
       aria-label="Instagram"
     >
-      <FontAwesomeIcon icon={faInstagram} size="2x" aria-label="Instagram"></FontAwesomeIcon>
+      <Icon name="instagram" size="2x" />
     </a>
   </div>
 )

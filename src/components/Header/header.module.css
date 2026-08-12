@@ -1,5 +1,5 @@
 .Header {
-  background-color: #f2e6e7;
+  background-color: var(--color-blush);
   height: 50px;
   display: flex;
   align-items: center;
@@ -38,17 +38,19 @@
 .Link {
   position: relative;
   top: 3px;
-  color: #09083e;
+  color: var(--color-ink-soft);
   text-decoration: none;
+  transition: color 0.15s ease-out;
 }
 
 .Link:hover {
-  color: #000000;
+  color: var(--color-ink);
   text-decoration: underline;
 }
 
 .Icon {
   margin-right: 10px;
+  color: var(--color-rose-deep);
 }
 
 .LeftContainer > a:last-child {

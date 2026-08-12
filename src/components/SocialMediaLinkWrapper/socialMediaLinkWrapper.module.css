@@ -1,12 +1,13 @@
 .Link {
   margin-left: 5px;
   margin-right: 5px;
-  color: #09083e;
+  color: var(--color-plum);
   text-decoration: none;
+  transition: color 0.15s ease-out;
 }
 
 .Link:hover {
-  color: #000000;
+  color: var(--color-rose-deep);
 }
 
 .Link > svg {
@@ -14,5 +15,5 @@
 }
 
 .Link > svg:hover {
-  transform: scale(1.03);
+  transform: scale(1.15);
 }

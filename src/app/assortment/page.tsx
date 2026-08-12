@@ -7,6 +7,14 @@ import { strings } from '@/utils/strings'
 export const metadata: Metadata = {
   title: strings.assortment.title,
   description: strings.assortment.description,
+  alternates: {
+    canonical: '/assortment',
+  },
+  openGraph: {
+    title: strings.assortment.title,
+    description: strings.assortment.description,
+    url: '/assortment',
+  },
 }
 
 const Assortment = async () => {

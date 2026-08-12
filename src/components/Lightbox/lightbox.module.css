@@ -6,7 +6,8 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(40, 33, 80, 0.82);
+  backdrop-filter: blur(2px);
 }
 
 .Container {
@@ -51,20 +52,21 @@
   position: absolute;
   top: 48%;
   left: 10px;
-  color: #ffffff;
+  color: var(--color-cream);
 }
 
 .NextButton {
   position: absolute;
   top: 48%;
   right: 10px;
-  color: #ffffff;
+  color: var(--color-cream);
 }
 
 .CloseButton {
   position: absolute;
   right: 0;
   top: 5px;
+  color: var(--color-cream);
 }
 
 .CloseText {

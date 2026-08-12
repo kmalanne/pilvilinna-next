@@ -50,14 +50,20 @@ export const Navigation = () => {
       <div className={styles.Container}>
         <div className={styles.Navbar}>
           <div className={styles.Brand}>
-            <div className={styles.ImageWrapper}>
-              <Image fill={true} src="/images/logo.jpg" alt={strings.navigation.logo} />
-            </div>
+            <Link href={AppRoute.Home} className={styles.ImageWrapper} onClick={() => setExpanded(false)}>
+              <Image
+                fill={true}
+                sizes="(max-width: 1000px) 60px, 160px"
+                src="/images/logo2.jpg"
+                alt={strings.navigation.logo}
+              />
+            </Link>
           </div>
           <button
             className={styles.Toggle}
             aria-controls="responsive-navbar-nav"
             aria-expanded={isExpanded}
+            aria-label={strings.navigation.menu}
             onClick={onToggle}
           >
             <span className={styles.ToggleIcon}></span>
@@ -95,9 +101,6 @@ export const Navigation = () => {
                 onClick={onToggle}
               >
                 {strings.navigation.contact}
-              </Link>
-              <Link className={styles.Link} href="http://annaj-sukkiajasuklaata.blogspot.com/">
-                {strings.navigation.blog}
               </Link>
             </div>
           </div>

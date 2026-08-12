@@ -1,9 +1,8 @@
-import { faChevronLeft, faChevronRight, faTimes } from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import type React from 'react'
 import { useEffect, useState } from 'react'
 import { createPortal } from 'react-dom'
 
+import { Icon } from '@/components/Icon'
 import type { Asset } from '@/lib/types'
 
 import styles from './lightbox.module.css'
@@ -133,7 +132,7 @@ export const Lightbox = ({ current, images, onClose }: LightboxProps) => {
         aria-label="previous_button"
         onClick={onClickPrev}
       >
-        <FontAwesomeIcon icon={faChevronLeft} size="2x" title="previous_button"></FontAwesomeIcon>
+        <Icon name="chevron-left" size="2x" title="previous_button" />
       </button>
     )
   }
@@ -149,7 +148,7 @@ export const Lightbox = ({ current, images, onClose }: LightboxProps) => {
         aria-label="next_button"
         onClick={onClickNext}
       >
-        <FontAwesomeIcon icon={faChevronRight} size="2x" title="next_button"></FontAwesomeIcon>
+        <Icon name="chevron-right" size="2x" title="next_button" />
       </button>
     )
   }
@@ -163,12 +162,7 @@ export const Lightbox = ({ current, images, onClose }: LightboxProps) => {
           onClick={onClickClose}
         >
           <span className={styles.CloseText}>Close</span>
-          <FontAwesomeIcon
-            icon={faTimes}
-            size="2x"
-            inverse
-            title="close_modal_button"
-          ></FontAwesomeIcon>
+          <Icon name="xmark" size="2x" title="close_modal_button" />
         </button>
         <div className={styles.Content}>{renderImage()}</div>
         {renderPrevArrow()}
