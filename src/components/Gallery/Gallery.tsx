@@ -3,8 +3,8 @@ import { Fragment, useState } from 'react'
 import type { Asset } from '@/lib/types'
 
 import styles from './gallery.module.css'
-import { GalleryImage as Image } from './GalleryImage'
-import { Lightbox } from '../Lightbox'
+import { GalleryImage as Image } from './GalleryImage/GalleryImage'
+import { Lightbox } from '../Lightbox/Lightbox'
 
 export type GalleryProps = {
   images?: Array<Asset>

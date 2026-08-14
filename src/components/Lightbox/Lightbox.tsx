@@ -2,11 +2,11 @@ import type React from 'react'
 import { useEffect, useState } from 'react'
 import { createPortal } from 'react-dom'
 
-import { Icon } from '@/components/Icon'
+import { Icon } from '@/components/Icon/Icon'
 import type { Asset } from '@/lib/types'
 
 import styles from './lightbox.module.css'
-import { GalleryImage as Image } from '../Gallery/GalleryImage'
+import { GalleryImage as Image } from '../Gallery/GalleryImage/GalleryImage'
 
 export type LightboxProps = {
   current: number

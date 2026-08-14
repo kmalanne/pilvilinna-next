@@ -2,11 +2,60 @@
 
 ## Pilvilinnan leipomo
 
-This project is a static website for Pilvilinnan leipomo (home bakery located in Nokia, Finland).
+Website for Pilvilinnan leipomo, a home bakery located in Nokia, Finland. Built with
+[Next.js](https://nextjs.org/) (App Router) and React, with content managed in
+[Contentful](https://www.contentful.com/) and fetched via its GraphQL API.
 
-## Development
+## Tech stack
 
-### `npm run dev`
+- **Next.js 16** (App Router) + **React 19**
+- **TypeScript**
+- **Contentful** (GraphQL Content API) for content
+- **CSS Modules** for styling
+- **ESLint** + **Prettier**
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Getting started
+
+### Prerequisites
+
+- Node.js (the version supported by Next.js 16)
+- A Contentful space with the expected content model
+
+### Environment variables
+
+Create a `.env.local` file in the project root:
+
+```bash
+CONTENTFUL_SPACE_ID=your_space_id
+CONTENTFUL_ACCESS_TOKEN=your_access_token
+```
+
+Without these, content requests to Contentful will fail and images render with an empty source.
+
+### Install
+
+```bash
+npm install
+```
+
+## Scripts
+
+| Script | Description |
+| --- | --- |
+| `npm run dev` | Start the development server at [http://localhost:3000](http://localhost:3000). |
+| `npm run build` | Create a production build. |
+| `npm run start` | Run the production build. |
+| `npm run lint` | Lint the codebase with ESLint. |
+
+## Project structure
+
+```
+src/
+  app/          Next.js App Router routes, layout and metadata
+  components/    Reusable UI components (CSS Modules per component)
+  containers/    Page-level sections composed from components
+  lib/           Contentful API client and shared types
+  utils/         Routing and string helpers
+  style/         Global styles and design tokens
+public/          Static assets (images, manifest, robots.txt)
+```

@@ -3,9 +3,9 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
-import { RichText } from '@/components/RichText'
-import { ServiceWrapper } from '@/components/ServiceWrapper'
-import { TestimonialWrapper } from '@/components/TestimonialWrapper'
+import { RichText } from '@/components/RichText/RichText'
+import { ServiceWrapper } from '@/components/ServiceWrapper/ServiceWrapper'
+import { TestimonialWrapper } from '@/components/TestimonialWrapper/TestimonialWrapper'
 import type { HomeData } from '@/lib/types'
 import { AppRoute } from '@/utils/route'
 import { strings } from '@/utils/strings'

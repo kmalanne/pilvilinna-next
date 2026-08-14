@@ -1,7 +1,7 @@
 'use client'
 
-import { Banner } from '@/components/Banner'
-import { RichText } from '@/components/RichText'
+import { Banner } from '@/components/Banner/Banner'
+import { RichText } from '@/components/RichText/RichText'
 import type { OrderingData } from '@/lib/types'
 import { strings } from '@/utils/strings'
 

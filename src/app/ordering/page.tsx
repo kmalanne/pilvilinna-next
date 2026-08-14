@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 
-import { Ordering as OrderingSection } from '@/containers/Ordering'
+import { Ordering as OrderingSection } from '@/containers/Ordering/Ordering'
 import { fetchOrderingCollection } from '@/lib/api'
 import { strings } from '@/utils/strings'
 

@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 
-import { Assortment as AssortmentSection } from '@/containers/Assortment'
+import { Assortment as AssortmentSection } from '@/containers/Assortment/Assortment'
 import { fetchAssortmentCollection } from '@/lib/api'
 import { strings } from '@/utils/strings'
 

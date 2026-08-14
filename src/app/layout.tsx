@@ -1,9 +1,9 @@
 import type { Metadata, Viewport } from 'next'
 import { Fraunces, Josefin_Slab } from 'next/font/google'
 
-import { Footer } from '@/components/Footer'
-import { Header } from '@/components/Header'
-import { Navigation } from '@/components/Navigation'
+import { Footer } from '@/components/Footer/Footer'
+import { Header } from '@/components/Header/Header'
+import { Navigation } from '@/components/Navigation/Navigation'
 import { fetchContactCollection } from '@/lib/api'
 import '../style/globals.css'
 

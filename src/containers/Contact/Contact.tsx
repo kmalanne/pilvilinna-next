@@ -1,4 +1,4 @@
-import { Banner } from '@/components/Banner'
+import { Banner } from '@/components/Banner/Banner'
 import type { ContactData } from '@/lib/types'
 import { strings } from '@/utils/strings'
 

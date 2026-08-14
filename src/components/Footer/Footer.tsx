@@ -4,7 +4,7 @@ import type { ContactData } from '@/lib/types'
 import { strings } from '@/utils/strings'
 
 import styles from './footer.module.css'
-import { SocialMediaLinkWrapper } from '../SocialMediaLinkWrapper'
+import { SocialMediaLinkWrapper } from '../SocialMediaLinkWrapper/SocialMediaLinkWrapper'
 
 export type FooterProps = {
   data?: ContactData

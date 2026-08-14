@@ -1,8 +1,8 @@
 'use client'
 
-import { Banner } from '@/components/Banner'
-import { Gallery } from '@/components/Gallery'
-import { RichText } from '@/components/RichText'
+import { Banner } from '@/components/Banner/Banner'
+import { Gallery } from '@/components/Gallery/Gallery'
+import { RichText } from '@/components/RichText/RichText'
 import type { AssortmentData } from '@/lib/types'
 import { strings } from '@/utils/strings'
 

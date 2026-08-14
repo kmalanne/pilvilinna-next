@@ -1,7 +1,7 @@
 import type { ServiceItem as TServiceItem } from '@/lib/types'
 
 import styles from './service.module.css'
-import { ServiceItem } from './ServiceItem'
+import { ServiceItem } from './ServiceItem/ServiceItem'
 
 export type ServiceWrapperProps = {
   services?: Array<TServiceItem>

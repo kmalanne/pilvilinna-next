@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 
-import { Contact as ContactSection } from '@/containers/Contact'
+import { Contact as ContactSection } from '@/containers/Contact/Contact'
 import { fetchContactCollection } from '@/lib/api'
 import { strings } from '@/utils/strings'
 

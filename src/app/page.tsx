@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 
-import { Home as HomeSection } from '@/containers/Home'
+import { Home as HomeSection } from '@/containers/Home/Home'
 import { fetchHomeCollection } from '@/lib/api'
 import { strings } from '@/utils/strings'
 

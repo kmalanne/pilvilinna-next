@@ -1,10 +1,10 @@
 'use client'
 
-import { Icon } from '@/components/Icon'
+import { Icon } from '@/components/Icon/Icon'
 import type { ContactData } from '@/lib/types'
 
 import styles from './header.module.css'
-import { SocialMediaLinkWrapper } from '../SocialMediaLinkWrapper'
+import { SocialMediaLinkWrapper } from '../SocialMediaLinkWrapper/SocialMediaLinkWrapper'
 
 export type HeaderProps = {
   data?: ContactData

@@ -1,7 +1,7 @@
 import type { TestimonialItem as TTestimonialItem } from '@/lib/types'
 
 import styles from './testimonial.module.css'
-import { TestimonialItem } from './TestimonialItem'
+import { TestimonialItem } from './TestimonialItem/TestimonialItem'
 
 export type TestimonialWrapperProps = {
   testimonials?: Array<TTestimonialItem>

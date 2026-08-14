@@ -1,4 +1,4 @@
-import { Icon } from '@/components/Icon'
+import { Icon } from '@/components/Icon/Icon'
 import { strings } from '@/utils/strings'
 
 import styles from './socialMediaLinkWrapper.module.css'
